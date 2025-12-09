@@ -1,117 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Resume | Priyanshu Kumar</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f4f7fb;
-        }
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-            overflow: hidden;
-        }
-        .header {
-            background: linear-gradient(135deg, #0066ff, #00c2ff);
-            padding: 40px;
-            color: white;
-        }
-        .header h1 {
-            margin: 0;
-            font-size: 36px;
-        }
-        .header h3 {
-            margin-top: 5px;
-            font-weight: 400;
-        }
-        .section {
-            padding: 30px 40px;
-            border-bottom: 1px solid #e6e6e6;
-        }
-        .section:last-child {
-            border-bottom: none;
-        }
-        .section h2 {
-            margin-top: 0;
-            color: #0066ff;
-        }
-        .skills span {
-            display: inline-block;
-            background: #e8f0ff;
-            padding: 8px 14px;
-            margin: 6px;
-            border-radius: 10px;
-            font-size: 14px;
-        }
-        .footer {
-            text-align: center;
-            padding: 20px;
-            background: #f0f0f0;
-            font-size: 14px;
-        }
-        .social a {
-            margin: 0 10px;
-            text-decoration: none;
-            color: #0066ff;
-            font-weight: bold;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Priyanshu Kumar — Resume</title>
+  <style>
+    :root{
+      --accent:#0066ff;
+      --bg:#f4f7fb;
+      --card:#ffffff;
+      --muted:#6b7585;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter, system-ui, Arial, Helvetica, sans-serif;background:linear-gradient(180deg,#f7fbff,#f4f7fb);color:#0b1220}
+    .wrapper{max-width:980px;margin:34px auto;padding:18px}
+    .card{background:var(--card);border-radius:16px;box-shadow:0 18px 45px rgba(8,20,50,0.08);overflow:hidden;animation:cardPop .6s ease both}
+    .header{display:flex;align-items:center;gap:22px;padding:28px;background:linear-gradient(135deg,var(--accent),#00c2ff);color:#fff}
+    .avatar{width:110px;height:110px;border-radius:14px;overflow:hidden;border:4px solid rgba(255,255,255,0.14);flex:0 0 110px;animation:float 4s ease-in-out infinite}
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+    .title{flex:1}
+    .title h1{margin:0;font-size:24px;letter-spacing:0.5px;text-transform:uppercase}
+    .title p{margin:6px 0 0;opacity:0.95;font-weight:600}
+    .contacts{margin-top:10px;font-size:14px;opacity:0.95}
+    .contacts span{display:inline-block;margin-right:12px}
+    .cta{min-width:160px;text-align:right}
+    .btn{display:inline-block;padding:10px 14px;border-radius:12px;background:#fff;color:var(--accent);font-weight:800;text-decoration:none;box-shadow:0 8px 18px rgba(255,255,255,0.06);transition:transform .18s ease,box-shadow .18s ease}
+    .btn:hover{transform:translateY(-4px)}
+    .body{display:grid;grid-template-columns:1fr 340px;gap:30px;padding:28px}
+    main h2{color:var(--accent);margin:0 0 12px;font-size:18px}
+    .about p{margin:0 0 12px;line-height:1.6;opacity:0;animation:fadeIn .7s ease forwards .12s}
+    .skills .chips{margin:8px 0}
+    .chip{display:inline-block;padding:8px 12px;margin:6px;border-radius:999px;background:#eef6ff;font-weight:700;font-size:13px;transform:translateY(10px);opacity:0;animation:popUp .5s forwards}
+    .chip:nth-child(1){animation-delay:.28s}.chip:nth-child(2){animation-delay:.36s}.chip:nth-child(3){animation-delay:.44s}.chip:nth-child(4){animation-delay:.52s}
+    .projects ul{padding-left:18px;margin:6px 0;opacity:0;animation:fadeIn .7s ease forwards .35s}
+    .projects li{margin-bottom:10px}
+    aside.side{padding:18px;background:linear-gradient(180deg,rgba(255,255,255,0.7),#fff);border-left:1px solid #eef6fb;border-radius:12px}
+    .social{margin-top:6px}
+    .social a{display:inline-block;margin-bottom:8px;text-decoration:none;font-weight:700;color:var(--accent)}
+    .edu p{margin:6px 0}
+    .download-secondary{display:inline-block;padding:10px 12px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:800;margin-top:10px;transition:transform .18s ease}
+    .download-secondary:hover{transform:translateY(-4px)}
+    footer{padding:18px;text-align:center;background:transparent;border-top:1px solid #f0f4fb;font-size:13px;color:var(--muted)}
+    @media(max-width:920px){.body{grid-template-columns:1fr}.avatar{width:92px;height:92px}}
+    /* animations */
+    @keyframes float{0%{transform:translateY(-4px)}50%{transform:translateY(6px)}100%{transform:translateY(-4px)}}
+    @keyframes cardPop{0%{opacity:0;transform:scale(.98) translateY(10px)}100%{opacity:1;transform:scale(1) translateY(0)}}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes popUp{from{opacity:0;transform:translateY(12px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
+    /* skill bars */
+    .skillbar{margin:12px 0}
+    .skillbar .label{font-weight:700;font-size:13px;margin-bottom:6px}
+    .bar{height:10px;background:#e9f3ff;border-radius:999px;overflow:hidden}
+    .bar > i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),#00c2ff);width:0%;border-radius:999px;animation:fillbar 1s forwards}
+    @keyframes fillbar{0%{width:0}100%{width:70%}}
+    .muted{color:var(--muted)}
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>PRIYANSHU KUMAR</h1>
-            <h3>“First-Year CSE Student | Tech Enthusiast | Learning DSA & Web Development | NIT Rourkela”</h3>
-            <p>Email: priyanshuask528@gmail.com | Phone: +91 7667550686,9341871925</p>
+  <div class="wrapper">
+    <div class="card">
+      <header class="header">
+        <div class="avatar">
+          <!-- replace this with your real photo in repo: assets/photo.jpg -->
+          <img src="assets/photo.jpg" alt="Priyanshu Kumar">
+        </div>
+        <div class="title">
+          <h1>PRIYANSHU KUMAR</h1>
+          <p>“First-Year CSE Student | Tech Enthusiast | Learning DSA & Web Development | NIT Rourkela”</p>
+          <div class="contacts">
+            <span>📧 priyanshuask528@gmail.com</span>
+            <span>📞 7667550686, 9341871925</span>
+          </div>
         </div>
 
-        <div class="section">
+        <div class="cta">
+          <a class="btn" href="resume.pdf" download>⬇️ Download Resume</a>
+        </div>
+      </header>
+
+      <div class="body">
+        <main>
+          <section class="about">
             <h2>About Me</h2>
-            <p>I am a first-year undergraduate student pursuing Computer Science and Engineering at NIT Rourkela. I am passionate about technology, programming, and problem-solving. Currently, I am exploring different fields in computer science such as Data Structures, Algorithms, Web Development, and Artificial Intelligence. I am eager to learn, collaborate, and grow in the tech community.</p>
-        </div>
+            <p>I'm a first-year undergraduate at NIT Rourkela studying Computer Science & Engineering. I love programming, solving problems, and building projects. Currently focusing on Data Structures & Algorithms, frontend basics and small full-stack projects to grow practically.</p>
+          </section>
 
-        <div class="section">
+          <section class="skills" style="margin-top:18px">
             <h2>Skills</h2>
-            <div class="skills">
-                <span>Video Editing</span>
-                <span>C++</span>
-                <span>Git & GitHub</span>
-                <span>DSA (Basics)</span>
+            <div class="chips">
+              <span class="chip">Learning DSA</span>
+              <span class="chip">Video Editing</span>
+              <span class="chip">C++</span>
+              <span class="chip">Git & GitHub</span>
             </div>
-        </div>
 
-        <div class="section">
-            <h2>Education</h2>
-            <p><strong># Matriculation(91%)</strong><br/>Meridian Academy(2022)</p>
-            <p><strong># Intermediate(91%)</strong><br/>Pvss DAV Public School(2024)</p>
-            <p><strong># B.Tech in Computer Science & Engineering</strong><br/>NIT ROURKELA(2025–2029)</p>
-        </div>
+            <div style="margin-top:12px">
+              <div class="skillbar">
+                <div class="label">DSA Practice</div>
+                <div class="bar"><i style="animation-delay:.2s;width:60%"></i></div>
+              </div>
+              <div class="skillbar">
+                <div class="label">C++</div>
+                <div class="bar"><i style="animation-delay:.35s;width:72%"></i></div>
+              </div>
+            </div>
+          </section>
 
-        <div class="section">
+          <section class="projects" style="margin-top:18px">
             <h2>Projects</h2>
             <ul>
-                <li>Basic Calculator using C++</li>
-                <li>Portfolio Website (HTML/CSS)</li>
+              <li><strong>Calculator (C++)</strong> — Console application implementing arithmetic operations and menu navigation. Focus on modular code and input validation.</li>
+              <li><strong>Portfolio Website</strong> — This responsive resume site built with HTML/CSS. Includes download button, social links and animations.</li>
+              <li><strong>DSA Practice Repo</strong> — Organized solutions for arrays, strings and sorting with complexity notes to help interview prep.</li>
+              <li><strong>Video Editing Mini-Projects</strong> — Short clips edited for social media and college events (color grading & cuts).</li>
             </ul>
-        </div>
+          </section>
+        </main>
 
-        <div class="section">
-            <h2>Social Links</h2>
-            <div class="social">
-                <a href="#">LinkedIn</a>
-                <a href="#">GitHub</a>
-                <a href="#">Portfolio</a>
-            </div>
-        </div>
+        <aside class="side">
+          <h3>Social & Contact</h3>
+          <div class="social">
+            <a href="https://github.com/P2THE28" target="_blank">GitHub</a><br>
+            <a href="https://www.linkedin.com/in/p2the28?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank">LinkedIn</a><br>
+            <a href="https://www.instagram.com/p2the28?igsh=MWFsYWV6MTlteWR4cw==" target="_blank">Instagram</a><br>
+            <a href="https://x.com/P2THE28?t=IZRobFVoNLyfHDj52oJkfA&s=09" target="_blank">X / Twitter</a>
+          </div>
 
-        <div class="footer">© 2025 Priyanshu Kumar</div>
+          <h3 style="margin-top:16px">Education</h3>
+          <div class="edu muted">
+            <p><strong>Matriculation (91%)</strong><br>Meridian Academy (2022)</p>
+            <p><strong>Intermediate (91%)</strong><br>PVSS DAV Public School (2024)</p>
+            <p><strong>B.Tech — Computer Science & Engineering</strong><br>NIT ROURKELA (2025 — 2029)</p>
+          </div>
+
+          <div style="margin-top:16px">
+            <a class="download-secondary" href="resume.pdf" download>Download PDF</a>
+          </div>
+        </aside>
+      </div>
+
+      <footer>© 2025 PRIYANSHU KUMAR — Built with ❤️</footer>
     </div>
+  </div>
+
+  <script>
+    /* small script to trigger progress bar animations once page loads */
+    window.addEventListener('load', () => {
+      // ensure bars have width set inline (already are) — this restarts animation if needed
+      document.querySelectorAll('.bar > i').forEach(el => {
+        const w = el.style.width || '60%';
+        el.style.width = '0%';
+        setTimeout(()=> el.style.width = w, 100);
+      });
+    });
+  </script>
 </body>
 </html>
