@@ -1,186 +1,243 @@
-<!DOCTYPE html> <html lang="en"> <head> <meta charset="utf-8" /> <meta name="viewport" content="width=device-width,initial-scale=1" /> <title>Priyanshu Kumar — Resume</title> <style> :root{ --accent:#0066ff; --bg:#f4f7fb; --card:#ffffff; --muted:#6b7585; } *{box-sizing:border-box} body{margin:0;font-family:Inter, system-ui, Arial, Helvetica, sans-serif;background:linear-gradient(180deg,#f7fbff,#f4f7fb);color:#0b1220} .wrapper{max-width:980px;margin:34px auto;padding:18px} .card{background:var(--card);border-radius:16px;box-shadow:0 18px 45px rgba(8,20,50,0.08);overflow:hidden;animation:cardPop .6s ease both} .header{display:flex;align-items:center;gap:22px;padding:28px;background:linear-gradient(135deg,var(--accent),#00c2ff);color:#fff} .avatar{width:110px;height:110px;border-radius:14px;overflow:hidden;border:4px solid rgba(255,255,255,0.14);flex:0 0 110px;animation:float 4s ease-in-out infinite} .avatar img{width:100%;height:100%;object-fit:cover;display:block} .title{flex:1} .title h1{margin:0;font-size:24px;letter-spacing:0.5px;text-transform:uppercase} .title p{margin:6px 0 0;opacity:0.95;font-weight:600} .contacts{margin-top:10px;font-size:14px;opacity:0.95} .contacts span{display:inline-block;margin-right:12px} .cta{min-width:160px;text-align:right} .btn{display:inline-block;padding:10px 14px;border-radius:12px;background:#fff;color:var(--accent);font-weight:800;text-decoration:none;box-shadow:0 8px 18px rgba(255,255,255,0.06);transition:transform .18s ease,box-shadow .18s ease} .btn:hover{transform:translateY(-4px)} .body{display:grid;grid-template-columns:1fr 340px;gap:30px;padding:28px} main h2{color:var(--accent);margin:0 0 12px;font-size:18px} .about p{margin:0 0 12px;line-height:1.6;opacity:0;animation:fadeIn .7s ease forwards .12s} .skills .chips{margin:8px 0} .chip{display:inline-block;padding:8px 12px;margin:6px;border-radius:999px;background:#eef6ff;font-weight:700;font-size:13px;transform:translateY(10px);opacity:0;animation:popUp .5s forwards} .chip:nth-child(1){animation-delay:.28s}.chip:nth-child(2){animation-delay:.36s}.chip:nth-child(3){animation-delay:.44s}.chip:nth-child(4){animation-delay:.52s} .projects ul{padding-left:18px;margin:6px 0;opacity:0;animation:fadeIn .7s ease forwards .35s} .projects li{margin-bottom:10px} aside.side{padding:18px;background:linear-gradient(180deg,rgba(255,255,255,0.7),#fff);border-left:1px solid #eef6fb;border-radius:12px} .social{margin-top:6px} .social a{display:inline-block;margin-bottom:8px;text-decoration:none;font-weight:700;color:var(--accent)} .edu p{margin:6px 0} .download-secondary{display:inline-block;padding:10px 12px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:800;margin-top:10px;transition:transform .18s ease} .download-secondary:hover{transform:translateY(-4px)} footer{padding:18px;text-align:center;background:transparent;border-top:1px solid #f0f4fb;font-size:13px;color:var(--muted)} @media(max-width:920px){.body{grid-template-columns:1fr}.avatar{width:92px;height:92px}} /* animations */ @keyframes float{0%{transform:translateY(-4px)}50%{transform:translateY(6px)}100%{transform:translateY(-4px)}} @keyframes cardPop{0%{opacity:0;transform:scale(.98) translateY(10px)}100%{opacity:1;transform:scale(1) translateY(0)}} @keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}} @keyframes popUp{from{opacity:0;transform:translateY(12px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}} /* skill bars */ .skillbar{margin:12px 0} .skillbar .label{font-weight:700;font-size:13px;margin-bottom:6px} .bar{height:10px;background:#e9f3ff;border-radius:999px;overflow:hidden} .bar > i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),#00c2ff);width:0%;border-radius:999px;animation:fillbar 1s forwards} @keyframes fillbar{0%{width:0}100%{width:70%}} .muted{color:var(--muted)} </style> </head> <body> <div class="wrapper"> <div class="card"> <header class="header"> <div class="avatar"> <!-- replace this with your real photo in repo: assets/photo.jpg --> <img src="assets/photo.jpg" alt="Priyanshu Kumar"> </div> <div class="title"> <h1>PRIYANSHU KUMAR</h1> <p>“First-Year CSE Student | Tech Enthusiast | Learning DSA & Web Development | NIT Rourkela”</p> <div class="contacts"> <span>📧 priyanshuask528@gmail.com</span> <span>📞 7667550686,9341871925</span> </div> </div> <div class="cta"> <a class="btn" href="resume.pdf" download>⬇️ Download Resume</a> </div> </header> <div class="body"> <main> <section class="about"> <h2>About Me</h2> <p>I'm a first-year undergraduate at NIT Rourkela studying Computer Science & Engineering. I love programming, solving problems, and building projects. Currently focusing on Data Structures & Algorithms, frontend basics and small full-stack projects to grow practically.</p> </section> <section class="skills" style="margin-top:18px"> <h2>Skills</h2> <div class="chips"> <span class="chip">Learning DSA</span> <span class="chip">Video Editing</span> <span class="chip">C++</span> <span class="chip">Git & GitHub</span> </div> <div style="margin-top:12px"> <div class="skillbar"> <div class="label">DSA Practice</div> <div class="bar"><i style="animation-delay:.2s;width:60%"></i></div> </div> <div class="skillbar"> <div class="label">C++</div> <div class="bar"><i style="animation-delay:.35s;width:72%"></i></div> </div> </div> </section> <section class="projects" style="margin-top:18px"> <h2>Projects</h2> <ul> <li><strong>Calculator (C++)</strong> — Console application implementing arithmetic operations and menu navigation. Focus on modular code and input validation.</li> <li><strong>Portfolio Website</strong> — This responsive resume site built with HTML/CSS. Includes download button, social links and animations.</li> <li><strong>DSA Practice Repo</strong> — Organized solutions for arrays, strings and sorting with complexity notes to help interview prep.</li> <li><strong>Video Editing Mini-Projects</strong> — Short clips edited for social media and college events (color grading & cuts).</li> </ul> </section> </main> <aside class="side"> <h3>Social & Contact</h3> <div class="social-icons"> <!-- Instagram --> <a href="https://www.instagram.com/p2the28?igsh=MWFsYWV6MTlteWR4cw==" target="_blank" aria-label="Instagram"> <svg width="26" height="26" viewBox="0 0 24 24" fill="none"> <path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm5 5c2.2 0 4 1.8 4 4s-1.8 4-4 4-4-1.8-4-4 1.8-4 4-4zm6.5-.9c0 .6-.5 1.1-1.1 1.1-.6 0-1.1-.5-1.1-1.1 0-.6.5-1.1 1.1-1.1.6 0 1.1.5 1.1 1.1z" fill="#E4405F"/> </svg> </a> <!-- GitHub --> <a href="https://github.com/P2THE28" target="_blank" aria-label="GitHub"> <svg width="26" height="26" viewBox="0 0 24 24" fill="#000"> <path d="M12 .5C5.7.5.7 5.5.7 11.8c0 5 3.3 9.2 7.9 10.7.6.1.8-.3.8-.6V20c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.2-1.7-1.2-1.7-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.7 2.6 1.2 3.2.9.1-.7.4-1.2.7-1.5-2.6-.3-5.3-1.3-5.3-5.9 0-1.3.5-2.4 1.2-3.3-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6.2 0c2.4-1.5 3.4-1.2 3.4-1.2.6 1.7.2 2.9.1 3.2.7.9 1.2 2 1.2 3.3 0 4.6-2.7 5.6-5.3 5.9.4.4.8 1 .8 2v3c0 .3.2.7.8.6 4.6-1.5 7.9-5.7 7.9-10.7C23.3 5.5 18.3.5 12 .5z"/> </svg> </a> <!-- LinkedIn --> <a href="https://www.linkedin.com/in/p2the28?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" aria-label="LinkedIn"> <svg width="26" height="26" viewBox="0 0 24 24" fill="#0A66C2"> <path d="M4.98 3.5c0 1.38-1.1 2.5-2.48 2.5C1.1 6 0 4.88 0 3.5S1.1 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V23h-4V8.5zM8.5 8.5h3.8V10h.1c.5-1 1.7-2 3.6-2 3.8 0 4.5 2.3 4.5 5.3V23h-4v-8c0-1.9 0-4.4-2.7-4.4s-3.1 2.1-3.1 4.3V23h-4V8.5z"/> </svg> </a> <!-- Twitter / X --> <a href="https://x.com/P2THE28?t=IZRobFVoNLyfHDj52oJkfA&s=09" target="_blank" aria-label="X"> <svg width="26" height="26" viewBox="0 0 24 24" fill="#000"> <path d="M22.2 2 14 10.3l8.5 11.7h-2.7L13 12.8 7.3 22H2l8.8-12L2.5 2h2.8L12 9.9 18 2h4.2z"/> </svg> </a> </div> <style> .social-icons a { display:inline-block; margin-right:12px; transition:transform .18s ease, opacity .18s ease; } .social-icons a:hover { transform:translateY(-4px) scale(1.08); opacity:0.9; } </style> <h3 style="margin-top:16px">Education</h3> <div class="edu muted"> <p><strong>Matriculation (91%)</strong><br>Meridian Academy (2022)</p> <p><strong>Intermediate (91%)</strong><br>PVSS DAV Public School (2024)</p> <p><strong>B.Tech — Computer Science & Engineering</strong><br>NIT ROURKELA (2025 — 2029)</p> </div> <div style="margin-top:16px"> <a class="download-secondary" href="resume.pdf" download>Download PDF</a> </div> </aside> </div> <footer>© 2025 PRIYANSHU KUMAR — Built with ❤️</footer> </div> </div> <script> /* small script to trigger progress bar animations once page loads */ window.addEventListener('load', () => { // ensure bars have width set inline (already are) — this restarts animation if needed document.<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Priyanshu Kumar — Resume</title>
-  <style>
-    :root{
-      --accent:#0066ff;
-      --bg:#f4f7fb;
-      --card:#ffffff;
-      --muted:#6b7585;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Inter, system-ui, Arial, Helvetica, sans-serif;background:linear-gradient(180deg,#f7fbff,#f4f7fb);color:#0b1220}
-    .wrapper{max-width:980px;margin:34px auto;padding:18px}
-    .card{background:var(--card);border-radius:16px;box-shadow:0 18px 45px rgba(8,20,50,0.08);overflow:hidden;animation:cardPop .6s ease both}
-    .header{display:flex;align-items:center;gap:22px;padding:28px;background:linear-gradient(135deg,var(--accent),#00c2ff);color:#fff}
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Priyanshu — Portfolio</title>
+<style>
+  :root{
+    --accent:#ffca03; /* warm yellow */
+    --accent-2:#0066ff;
+    --bg:#f3f6f9;
+    --card:#ffffff;
+    --muted:#6b7585;
+    --maxw:1100px;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);color:#0b1220;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:var(--maxw);margin:36px auto;padding:22px}
 
-    /* avatar styles + hover scale */
-    .avatar{width:110px;height:110px;border-radius:14px;overflow:hidden;border:4px solid rgba(255,255,255,0.14);flex:0 0 110px;animation:float 4s ease-in-out infinite;transition:transform .25s ease, box-shadow .25s ease}
-    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
-    .avatar:hover{animation-play-state:paused;transform:translateY(-6px) scale(1.06);box-shadow:0 18px 40px rgba(0,0,0,0.18)}
+  /* --- Cover --- */
+  .cover{display:grid;grid-template-columns:1fr 1fr;gap:28px;background:var(--card);border-radius:14px;overflow:hidden;box-shadow:0 20px 50px rgba(10,20,40,0.08)}
+  .cover-left{padding:44px 36px;position:relative;min-height:420px}
+  .brand{font-size:14px;font-weight:700;opacity:.9}
+  .title{font-size:46px;font-weight:800;margin:14px 0 8px;letter-spacing:0.6px}
+  .subtitle{font-weight:600;color:var(--muted);margin-bottom:8px}
+  .big-accent-svg{position:absolute;left:18px;top:18px;width:260px;height:140px;z-index:0}
+  .cover-left .meta{position:relative;z-index:1;margin-top:14px;color:#374151}
+  .cover-left p{line-height:1.5}
+  .cover-right{background:#fff;display:flex;align-items:center;justify-content:center;padding:18px}
+  .cover-photo{width:86%;height:86%;border-radius:8px;overflow:hidden;box-shadow:0 18px 40px rgba(6,10,30,0.08)}
+  .cover-photo img{width:100%;height:100%;object-fit:cover;display:block}
 
-    .title{flex:1}
-    .title h1{margin:0;font-size:24px;letter-spacing:0.5px;text-transform:uppercase}
-    .title p{margin:6px 0 0;opacity:0.95;font-weight:600}
-    .contacts{margin-top:10px;font-size:14px;opacity:0.95}
-    .contacts span{display:inline-block;margin-right:12px}.body{display:grid;grid-template-columns:1fr 340px;gap:30px;padding:28px}
-    main h2{color:var(--accent);margin:0 0 12px;font-size:18px}
-    .about p{margin:0 0 12px;line-height:1.6;opacity:0;animation:fadeIn .7s ease forwards .12s}
-    .skills .chips{margin:8px 0}
-    .chip{display:inline-block;padding:8px 12px;margin:6px;border-radius:999px;background:#eef6ff;font-weight:700;font-size:13px;transform:translateY(10px);opacity:0;animation:popUp .5s forwards}
-    .chip:nth-child(1){animation-delay:.28s}.chip:nth-child(2){animation-delay:.36s}.chip:nth-child(3){animation-delay:.44s}.chip:nth-child(4){animation-delay:.52s}
-    .projects ul{padding-left:18px;margin:6px 0;opacity:0;animation:fadeIn .7s ease forwards .35s}
-    .projects li{margin-bottom:10px}
-    aside.side{padding:18px;background:linear-gradient(180deg,rgba(255,255,255,0.7),#fff);border-left:1px solid #eef6fb;border-radius:12px}
-    .social{margin-top:6px}
-    .social a{display:inline-block;margin-bottom:8px;text-decoration:none;font-weight:700;color:var(--accent)}
-    .edu p{margin:6px 0}
-    footer{padding:18px;text-align:center;background:transparent;border-top:1px solid #f0f4fb;font-size:13px;color:var(--muted)}
-    @media(max-width:920px){.body{grid-template-columns:1fr}.avatar{width:92px;height:92px}}
-    /* animations */
-    @keyframes float{0%{transform:translateY(-4px)}50%{transform:translateY(6px)}100%{transform:translateY(-4px)}}
-    @keyframes cardPop{0%{opacity:0;transform:scale(.98) translateY(10px)}100%{opacity:1;transform:scale(1) translateY(0)}}
-    @keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
-    @keyframes popUp{from{opacity:0;transform:translateY(12px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
-    @keyframes qualSlide{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
-    /* skill bars */
-    .skillbar{margin:12px 0}
-    .skillbar .label{font-weight:700;font-size:13px;margin-bottom:6px}
-    .bar{height:10px;background:#e9f3ff;border-radius:999px;overflow:hidden}
-    .bar > i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),#00c2ff);width:0%;border-radius:999px;animation:fillbar 1s forwards}
-    @keyframes fillbar{0%{width:0}100%{width:70%}}
-    .muted{color:var(--muted)}
-  </style>
+  /* --- Projects grid --- */
+  .projects-grid{margin-top:30px;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .card-proj{background:var(--card);border-radius:12px;padding:14px;box-shadow:0 10px 25px rgba(8,20,50,0.06);display:flex;flex-direction:column;cursor:pointer}
+  .proj-media{height:160px;border-radius:8px;overflow:hidden;margin-bottom:12px}
+  .proj-media img{width:100%;height:100%;object-fit:cover;display:block}
+  .proj-title{font-weight:800;margin-bottom:6px}
+  .proj-desc{color:var(--muted);font-size:14px;flex:1}
+  .proj-meta{margin-top:12px;display:flex;justify-content:space-between;align-items:center}
+  .tag{background:var(--accent);color:#000;padding:6px 10px;border-radius:8px;font-weight:700;font-size:13px}
+
+  /* spread / booklet */
+  .spread{display:flex;gap:18px;margin-top:32px}
+  .spread .pane{flex:1;background:var(--card);padding:18px;border-radius:10px;box-shadow:0 12px 30px rgba(8,20,50,0.06)}
+  .spread .pane img{width:100%;height:260px;object-fit:cover;border-radius:8px;display:block}
+
+  /* header actions */
+  .header-actions{position:absolute;right:24px;top:24px;z-index:5;display:flex;gap:8px}
+  .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent-2);color:#fff;text-decoration:none;font-weight:800;transition:transform .18s ease}
+  .btn:hover{transform:translateY(-4px)}
+
+  /* lightbox modal */
+  .lightbox{position:fixed;inset:0;background:rgba(8,12,20,0.75);display:none;align-items:center;justify-content:center;padding:24px;z-index:9999}
+  .lightbox.active{display:flex}
+  .lightbox .inner{max-width:920px;width:100%;background:transparent}
+  .lightbox img{width:100%;height:auto;border-radius:8px;display:block}
+  .lightbox .nav{display:flex;justify-content:space-between;margin-top:8px}
+  .lightbox .nav button{background:rgba(255,255,255,0.08);border:0;color:#fff;padding:10px 12px;border-radius:8px;cursor:pointer}
+
+  /* typed headline */
+  .typed{display:inline-block;border-right:2px solid rgba(0,0,0,0.12);padding-right:6px}
+
+  /* small animations */
+  .card-proj, .cover-left, .cover-right { transform: translateY(8px); opacity:0; animation:pop .45s ease forwards; }
+  .card-proj:nth-child(1){animation-delay:.12s}.card-proj:nth-child(2){animation-delay:.18s}.card-proj:nth-child(3){animation-delay:.24s}
+  .cover-left{animation-delay:.05s}.cover-right{animation-delay:.08s}
+  @keyframes pop{to{transform:none;opacity:1}}
+  @keyframes pulse{0%{transform:scale(1)}50%{transform:scale(.995)}100%{transform:scale(1)}}
+
+  /* responsive */
+  @media(max-width:980px){.cover{grid-template-columns:1fr;min-height:auto}.projects-grid{grid-template-columns:repeat(2,1fr)}.spread{flex-direction:column}}
+  @media(max-width:560px){.projects-grid{grid-template-columns:1fr}}
+
+  /* print styles — two-page spread & page numbers */
+  @page { size: A4 landscape; margin: 12mm; }
+  @media print{
+    body{background:white}
+    .wrap{box-shadow:none;margin:0;padding:0}
+    .cover, .projects-grid, .spread, .card-proj{page-break-inside:avoid; break-inside:avoid}
+    .projects-grid{grid-template-columns:repeat(2,1fr)}
+    /* show page numbers bottom-right using CSS generated content (best-effort) */
+    footer.print-footer{position:fixed;bottom:6mm;right:12mm;font-size:12px;color:#666;}
+    footer.print-footer:after{content: "Page " counter(page) " ";}
+    .no-print{display:none}
+  }
+
+  footer{margin-top:28px;text-align:center;color:var(--muted);font-size:13px}
+
+</style>
 </head>
 <body>
-  <div class="wrapper">
-    <div class="card">
-      <header class="header">
-        <div class="avatar">
-          <!-- replace this with your real photo in repo: assets/photo.jpg -->
-          <img src="assets/photo.jpg" alt="Priyanshu Kumar">
+  <div class="wrap">
+
+    <section class="cover">
+      <div class="cover-left">
+        <!-- dynamic svg accent (animated) -->
+        <svg class="big-accent-svg" viewBox="0 0 400 240" preserveAspectRatio="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="g" x1="0" x2="1">
+              <stop offset="0%" stop-color="#ffd24d" />
+              <stop offset="100%" stop-color="#ff9f00" />
+            </linearGradient>
+          </defs>
+          <path id="shape" d="M0,0 L300,0 C360,0 380,40 380,90 C380,160 320,230 200,230 C90,230 0,180 0,120 Z" fill="url(#g)">
+            <animate attributeName="d" dur="6s" repeatCount="indefinite" values="M0,0 L300,0 C360,0 380,40 380,90 C380,160 320,230 200,230 C90,230 0,180 0,120 Z; M0,0 L300,0 C340,0 410,60 380,110 C350,170 300,230 200,210 C100,190 30,150 0,120 Z; M0,0 L300,0 C360,0 380,40 380,90 C380,160 320,230 200,230 C90,230 0,180 0,120 Z" />
+          </path>
+        </svg>
+
+        <div class="brand">PRIYANSHU KUMAR</div>
+        <h1 class="title">Portfolio — <span id="typed" class="typed"></span></h1>
+        <div class="subtitle">First-Year CSE Student • NIT Rourkela</div>
+
+        <div class="header-actions no-print">
+          <a class="btn" href="resume.pdf" download>⬇️ Download CV</a>
         </div>
-        <div class="title">
-          <h1>PRIYANSHU KUMAR</h1>
-          <p>“First-Year CSE Student | Tech Enthusiast | Learning DSA & Web Development | NIT Rourkela”</p>
-          <div class="contacts">
-            <span>📧 priyanshuask528@gmail.com</span>
-            <span>📞 7667550686,9341871925</span>
-          </div>
 
-          <!-- animated qualification rectangle -->
-          
-
+        <div class="meta">
+          <p>Email: <strong>priyanshuask528@gmail.com</strong></p>
+          <p>Phone: <strong>7667550686</strong></p>
+          <p style="margin-top:12px;color:var(--muted)">I build small projects, practice DSA and create short video edits — this portfolio shows a snapshot of my work.</p>
         </div>
-
-        <!-- removed download CTA as requested -->
-      </header>
-
-      <div class="body">
-        <main>
-          <section class="about">
-            <h2>About Me</h2>
-            <p>I'm a first-year undergraduate at NIT Rourkela studying Computer Science & Engineering. I love programming, solving problems, and building projects. Currently focusing on Data Structures & Algorithms, frontend basics and small full-stack projects to grow practically.</p>
-          </section>
-
-          <section class="skills" style="margin-top:18px">
-            <h2>Skills</h2>
-            <div class="chips">
-              <span class="chip">Learning DSA</span>
-              <span class="chip">Video Editing</span>
-              <span class="chip">C++</span>
-              <span class="chip">Git & GitHub</span>
-            </div>
-
-            <div style="margin-top:12px">
-              <div class="skillbar">
-                <div class="label">DSA Practice</div>
-                <div class="bar"><i style="animation-delay:.2s;width:60%"></i></div>
-              </div>
-              <div class="skillbar">
-                <div class="label">C++</div>
-                <div class="bar"><i style="animation-delay:.35s;width:72%"></i></div>
-              </div>
-            </div>
-          </section>
-
-          <section class="projects" style="margin-top:18px">
-            <h2>Projects</h2>
-            <ul>
-              <li><strong>Calculator (C++)</strong> — Console application implementing arithmetic operations and menu navigation. Focus on modular code and input validation.</li>
-              <li><strong>Portfolio Website</strong> — This responsive resume site built with HTML/CSS. Includes social links and animations.</li>
-              <li><strong>DSA Practice Repo</strong> — Organized solutions for arrays, strings and sorting with complexity notes to help interview prep.</li>
-              <li><strong>Video Editing Mini-Projects</strong> — Short clips edited for social media and college events (color grading & cuts).</li>
-            </ul>
-          </section>
-        </main>
-
-        <aside class="side">
-          <h3>Social & Contact</h3>
-          <div class="social-icons">
-  <!-- Instagram -->
-  <a href="https://www.instagram.com/p2the28?igsh=MWFsYWV6MTlteWR4cw==" target="_blank" aria-label="Instagram">
-    <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
-      <path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm5 5c2.2 0 4 1.8 4 4s-1.8 4-4 4-4-1.8-4-4 1.8-4 4-4zm6.5-.9c0 .6-.5 1.1-1.1 1.1-.6 0-1.1-.5-1.1-1.1 0-.6.5-1.1 1.1-1.1.6 0 1.1.5 1.1 1.1z"
-            fill="#E4405F"/>
-    </svg>
-  </a>
-
-  <!-- GitHub -->
-  <a href="https://github.com/P2THE28" target="_blank" aria-label="GitHub">
-    <svg width="26" height="26" viewBox="0 0 24 24" fill="#000">
-      <path d="M12 .5C5.7.5.7 5.5.7 11.8c0 5 3.3 9.2 7.9 10.7.6.1.8-.3.8-.6V20c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.2-1.7-1.2-1.7-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.7 2.6 1.2 3.2.9.1-.7.4-1.2.7-1.5-2.6-.3-5.3-1.3-5.3-5.9 0-1.3.5-2.4 1.2-3.3-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6.2 0c2.4-1.5 3.4-1.2 3.4-1.2.6 1.7.2 2.9.1 3.2.7.9 1.2 2 1.2 3.3 0 4.6-2.7 5.6-5.3 5.9.4.4.8 1 .8 2v3c0 .3.2.7.8.6 4.6-1.5 7.9-5.7 7.9-10.7C23.3 5.5 18.3.5 12 .5z"/>
-    </svg>
-  </a>
-
-  <!-- LinkedIn -->
-  <a href="https://www.linkedin.com/in/p2the28?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" aria-label="LinkedIn">
-    <svg width="26" height="26" viewBox="0 0 24 24" fill="#0A66C2">
-      <path d="M4.98 3.5c0 1.38-1.1 2.5-2.48 2.5C1.1 6 0 4.88 0 3.5S1.1 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V23h-4V8.5zM8.5 8.5h3.8V10h.1c.5-1 1.7-2 3.6-2 3.8 0 4.5 2.3 4.5 5.3V23h-4v-8c0-1.9 0-4.4-2.7-4.4s-3.1 2.1-3.1 4.3V23h-4V8.5z"/>
-    </svg>
-  </a>
-
-  <!-- Twitter / X -->
-  <a href="https://x.com/P2THE28?t=IZRobFVoNLyfHDj52oJkfA&s=09" target="_blank" aria-label="X">
-    <svg width="26" height="26" viewBox="0 0 24 24" fill="#000">
-      <path d="M22.2 2 14 10.3l8.5 11.7h-2.7L13 12.8 7.3 22H2l8.8-12L2.5 2h2.8L12 9.9 18 2h4.2z"/>
-    </svg>
-  </a>
-</div>
-
-<style>
-  .social-icons a { display:inline-block; margin-right:12px; transition:transform .18s ease, opacity .18s ease; }
-  .social-icons a:hover { transform:translateY(-4px) scale(1.08); opacity:0.9; }
-</style>
-
-
-          <h3 style="margin-top:16px">Education</h3>
-          <div class="edu muted">
-            <p><strong>Matriculation (91%)</strong><br>Meridian Academy (2022)</p>
-            <p><strong>Intermediate (91%)</strong><br>PVSS DAV Public School (2024)</p>
-            <p><strong>B.Tech — Computer Science & Engineering</strong><br>NIT ROURKELA (2025 — 2029)</p>
-          </div>
-
-        </aside>
       </div>
 
-      <footer>© 2025 PRIYANSHU KUMAR — Built with ❤️</footer>
+      <div class="cover-right">
+        <div class="cover-photo">
+          <img src="assets/cover.jpg" alt="Cover photo">
+        </div>
+      </div>
+    </section>
+
+    <section class="projects-grid" aria-label="Projects">
+      <article class="card-proj" data-index="0">
+        <div class="proj-media"><img src="assets/proj1.jpg" alt="Project 1"></div>
+        <div class="proj-title">Calculator (C++)</div>
+        <div class="proj-desc">Console based calculator demonstrating modular functions, input validation and a clean CLI menu.</div>
+        <div class="proj-meta"><span class="tag">C++</span><small class="muted">2024</small></div>
+      </article>
+
+      <article class="card-proj" data-index="1">
+        <div class="proj-media"><img src="assets/proj2.jpg" alt="Project 2"></div>
+        <div class="proj-title">Portfolio Website</div>
+        <div class="proj-desc">This responsive resume site built with HTML/CSS; includes download link and animated UI.</div>
+        <div class="proj-meta"><span class="tag">HTML/CSS</span><small class="muted">2025</small></div>
+      </article>
+
+      <article class="card-proj" data-index="2">
+        <div class="proj-media"><img src="assets/proj3.jpg" alt="Project 3"></div>
+        <div class="proj-title">DSA Practice Repo</div>
+        <div class="proj-desc">Solved problems with explanations (arrays, strings, basic algorithms) — aimed at interview prep.</div>
+        <div class="proj-meta"><span class="tag">DSA</span><small class="muted">Ongoing</small></div>
+      </article>
+    </section>
+
+    <div class="spread">
+      <div class="pane">
+        <img src="assets/proj4.jpg" alt="Project 4">
+        <h3>Video Editing Mini-Projects</h3>
+        <p class="muted">Short clips for social and college events — color grading, cuts and pacing experiments.</p>
+      </div>
+      <div class="pane">
+        <img src="assets/proj5.jpg" alt="Project 5">
+        <h3>More Work</h3>
+        <p class="muted">Extra screenshots, small UI snippets and notes on algorithms.</p>
+      </div>
+    </div>
+
+    <footer class="no-print">© 2025 PRIYANSHU KUMAR — <span class="muted">Built with ❤️</span></footer>
+    <footer class="print-footer" aria-hidden="true">© 2025 PRIYANSHU KUMAR</footer>
+  </div>
+
+  <!-- Lightbox markup -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-hidden="true">
+    <div class="inner">
+      <img id="lightbox-img" src="" alt="">
+      <div class="nav">
+        <button id="prev">◀ Prev</button>
+        <button id="next">Next ▶</button>
+      </div>
     </div>
   </div>
 
-  <script>
-    /* small script to trigger progress bar animations once page loads */
-    window.addEventListener('load', () => {
-      // ensure bars have width set inline (already are) — this restarts animation if needed
-      document.querySelectorAll('.bar > i').forEach(el => {
-        const w = el.style.width || '60%';
-        el.style.width = '0%';
-        setTimeout(()=> el.style.width = w, 100);
-      });
-    });
-  </script>
+<script>
+// typed headline
+const words = ['Learning DSA', 'Web Dev', 'Competitive Programming', 'Video Editing'];
+let tI=0, tPos=0, forward=true;
+const el = document.getElementById('typed');
+function typeTick(){
+  const word = words[tI];
+  if(forward){
+    tPos++;
+    el.textContent = word.slice(0,tPos);
+    if(tPos===word.length){forward=false;setTimeout(typeTick,900);return}
+  } else {
+    tPos--;
+    el.textContent = word.slice(0,tPos);
+    if(tPos===0){forward=true;tI=(tI+1)%words.length}
+  }
+  setTimeout(typeTick, forward?80:40);
+}
+setTimeout(typeTick,600);
+
+// lightbox / slideshow
+const imgs = Array.from(document.querySelectorAll('.projects-grid .proj-media img'));
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+let cur = 0;
+function openLightbox(index){
+  cur = index;
+  lightboxImg.src = imgs[cur].src;
+  lightbox.classList.add('active');
+  lightbox.setAttribute('aria-hidden','false');
+}
+function closeLightbox(){
+  lightbox.classList.remove('active');
+  lightbox.setAttribute('aria-hidden','true');
+}
+imgs.forEach((img,i)=> img.addEventListener('click', ()=> openLightbox(i)));
+document.getElementById('next').addEventListener('click', ()=>{cur=(cur+1)%imgs.length;lightboxImg.src=imgs[cur].src});
+document.getElementById('prev').addEventListener('click', ()=>{cur=(cur-1+imgs.length)%imgs.length;lightboxImg.src=imgs[cur].src});
+lightbox.addEventListener('click', (e)=>{ if(e.target===lightbox) closeLightbox(); });
+
+// keyboard navigation
+document.addEventListener('keydown', (e)=>{
+  if(lightbox.classList.contains('active')){
+    if(e.key==='ArrowRight') document.getElementById('next').click();
+    if(e.key==='ArrowLeft') document.getElementById('prev').click();
+    if(e.key==='Escape') closeLightbox();
+  }
+});
+
+// image fallback placeholder
+document.querySelectorAll('img').forEach(img=>{
+  img.onerror = ()=> img.src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400"><rect width="100%" height="100%" fill="%23e6eefc"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="%236b7585" font-size="20">Replace assets/*.jpg</text></svg>';
+});
+
+// ensure project cards clickable on touch
+Array.from(document.querySelectorAll('.card-proj')).forEach((card,i)=>{
+  card.addEventListener('click', ()=> openLightbox(i));
+});
+</script>
 </body>
 </html>
