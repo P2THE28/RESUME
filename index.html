@@ -1,253 +1,117 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Priyanshu — Portfolio</title>
-<style>
-  :root{
-    --accent:#ffca03; /* warm yellow */
-    --accent-2:#0066ff;
-    --bg:#f3f6f9;
-    --card:#ffffff;
-    --muted:#6b7585;
-    --maxw:1100px;
-  }
-  *{box-sizing:border-box}
-  body{margin:0;font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);color:#0b1220;-webkit-font-smoothing:antialiased}
-  .wrap{max-width:var(--maxw);margin:36px auto;padding:22px}
-
-  /* --- Cover --- */
-  .cover{display:grid;grid-template-columns:1fr 1fr;gap:28px;background:var(--card);border-radius:14px;overflow:hidden;box-shadow:0 20px 50px rgba(10,20,40,0.08)}
-  .cover-left{padding:44px 36px;position:relative;min-height:420px}
-  .brand{font-size:14px;font-weight:700;opacity:.9}
-  .title{font-size:46px;font-weight:800;margin:14px 0 8px;letter-spacing:0.6px}
-  .subtitle{font-weight:600;color:var(--muted);margin-bottom:8px}
-  .big-accent-svg{position:absolute;left:18px;top:18px;width:260px;height:140px;z-index:0}
-  .cover-left .meta{position:relative;z-index:1;margin-top:14px;color:#374151}
-  .cover-left p{line-height:1.5}
-  .cover-right{background:#fff;display:flex;align-items:center;justify-content:center;padding:18px}
-  .cover-photo{width:86%;height:86%;border-radius:8px;overflow:hidden;box-shadow:0 18px 40px rgba(6,10,30,0.08)}
-  .cover-photo img{width:100%;height:100%;object-fit:cover;display:block}
-
-  /* --- Projects grid --- */
-  .projects-grid{margin-top:30px;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-  .card-proj{background:var(--card);border-radius:12px;padding:14px;box-shadow:0 10px 25px rgba(8,20,50,0.06);display:flex;flex-direction:column;cursor:pointer}
-  .proj-media{height:160px;border-radius:8px;overflow:hidden;margin-bottom:12px}
-  .proj-media img{width:100%;height:100%;object-fit:cover;display:block}
-  .proj-title{font-weight:800;margin-bottom:6px}
-  .proj-desc{color:var(--muted);font-size:14px;flex:1}
-  .proj-meta{margin-top:12px;display:flex;justify-content:space-between;align-items:center}
-  .tag{background:var(--accent);color:#000;padding:6px 10px;border-radius:8px;font-weight:700;font-size:13px}
-
-  /* spread / booklet */
-  .spread{display:flex;gap:18px;margin-top:32px}
-  .spread .pane{flex:1;background:var(--card);padding:18px;border-radius:10px;box-shadow:0 12px 30px rgba(8,20,50,0.06)}
-  .spread .pane img{width:100%;height:260px;object-fit:cover;border-radius:8px;display:block}
-
-  /* header actions */
-  .header-actions{position:absolute;right:24px;top:24px;z-index:5;display:flex;gap:8px}
-  .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent-2);color:#fff;text-decoration:none;font-weight:800;transition:transform .18s ease}
-  .btn:hover{transform:translateY(-4px)}
-
-  /* lightbox modal */
-  .lightbox{position:fixed;inset:0;background:rgba(8,12,20,0.75);display:none;align-items:center;justify-content:center;padding:24px;z-index:9999}
-  .lightbox.active{display:flex}
-  .lightbox .inner{max-width:920px;width:100%;background:transparent}
-  .lightbox img{width:100%;height:auto;border-radius:8px;display:block}
-  .lightbox .nav{display:flex;justify-content:space-between;margin-top:8px}
-  .lightbox .nav button{background:rgba(255,255,255,0.08);border:0;color:#fff;padding:10px 12px;border-radius:8px;cursor:pointer}
-
-  /* typed headline */
-  .typed{display:inline-block;border-right:2px solid rgba(0,0,0,0.12);padding-right:6px}
-
-  /* small animations */
-  .card-proj, .cover-left, .cover-right { transform: translateY(8px); opacity:0; animation:pop .45s ease forwards; }
-  .card-proj:nth-child(1){animation-delay:.12s}.card-proj:nth-child(2){animation-delay:.18s}.card-proj:nth-child(3){animation-delay:.24s}
-  .cover-left{animation-delay:.05s}.cover-right{animation-delay:.08s}
-  @keyframes pop{to{transform:none;opacity:1}}
-  @keyframes pulse{0%{transform:scale(1)}50%{transform:scale(.995)}100%{transform:scale(1)}}
-
-  /* responsive */
-  @media(max-width:980px){.cover{grid-template-columns:1fr;min-height:auto}.projects-grid{grid-template-columns:repeat(2,1fr)}.spread{flex-direction:column}}
-  @media(max-width:560px){.projects-grid{grid-template-columns:1fr}}
-
-  /* print styles — two-page spread & page numbers */
-  @page { size: A4 landscape; margin: 12mm; }
-  @media print{
-    body{background:white}
-    .wrap{box-shadow:none;margin:0;padding:0}
-    .cover, .projects-grid, .spread, .card-proj{page-break-inside:avoid; break-inside:avoid}
-    .projects-grid{grid-template-columns:repeat(2,1fr)}
-    /* show page numbers bottom-right using CSS generated content (best-effort) */
-    footer.print-footer{position:fixed;bottom:6mm;right:12mm;font-size:12px;color:#666;}
-    footer.print-footer:after{content: "Page " counter(page) " ";}
-    .no-print{display:none}
-  }
-
-  footer{margin-top:28px;text-align:center;color:var(--muted);font-size:13px}
-
-</style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume | Priyanshu Kumar</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f7fb;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #0066ff, #00c2ff);
+            padding: 40px;
+            color: white;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+        .header h3 {
+            margin-top: 5px;
+            font-weight: 400;
+        }
+        .section {
+            padding: 30px 40px;
+            border-bottom: 1px solid #e6e6e6;
+        }
+        .section:last-child {
+            border-bottom: none;
+        }
+        .section h2 {
+            margin-top: 0;
+            color: #0066ff;
+        }
+        .skills span {
+            display: inline-block;
+            background: #e8f0ff;
+            padding: 8px 14px;
+            margin: 6px;
+            border-radius: 10px;
+            font-size: 14px;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #f0f0f0;
+            font-size: 14px;
+        }
+        .social a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #0066ff;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-  <div class="wrap">
-
-    <section class="cover">
-      <div class="cover-left">
-        <!-- dynamic svg accent (animated) -->
-        <svg class="big-accent-svg" viewBox="0 0 400 240" preserveAspectRatio="none" aria-hidden="true">
-          <defs>
-            <linearGradient id="g" x1="0" x2="1">
-              <stop offset="0%" stop-color="#ffd24d" />
-              <stop offset="100%" stop-color="#ff9f00" />
-            </linearGradient>
-          </defs>
-          <path id="shape" d="M0,0 L300,0 C360,0 380,40 380,90 C380,160 320,230 200,230 C90,230 0,180 0,120 Z" fill="url(#g)">
-            <animate attributeName="d" dur="6s" repeatCount="indefinite" values="M0,0 L300,0 C360,0 380,40 380,90 C380,160 320,230 200,230 C90,230 0,180 0,120 Z; M0,0 L300,0 C340,0 410,60 380,110 C350,170 300,230 200,210 C100,190 30,150 0,120 Z; M0,0 L300,0 C360,0 380,40 380,90 C380,160 320,230 200,230 C90,230 0,180 0,120 Z" />
-          </path>
-        </svg>
-
-        <div class="brand">PRIYANSHU KUMAR</div>
-        <h1 class="title">Portfolio — <span id="typed" class="typed"></span></h1>
-        <div class="subtitle">First-Year CSE Student • NIT Rourkela</div>
-
-        <div class="header-actions no-print">
-          <a class="btn" href="resume.pdf" download>⬇️ Download CV</a>
+    <div class="container">
+        <div class="header">
+            <h1>PRIYANSHU KUMAR</h1>
+            <h3>“First-Year CSE Student | Tech Enthusiast | Learning DSA & Web Development | NIT Rourkela”</h3>
+            <p>Email: priyanshuask528@gmail.com | Phone: +91 7667550686,9341871925</p>
         </div>
 
-        <div class="meta">
-          <p>Email: <strong>priyanshuask528@gmail.com</strong></p>
-          <p>Phone: <strong>7667550686</strong></p>
-          <p style="margin-top:12px;color:var(--muted)">I build small projects, practice DSA and create short video edits — this portfolio shows a snapshot of my work.</p>
+        <div class="section">
+            <h2>About Me</h2>
+            <p>I am a first-year undergraduate student pursuing Computer Science and Engineering at NIT Rourkela. I am passionate about technology, programming, and problem-solving. Currently, I am exploring different fields in computer science such as Data Structures, Algorithms, Web Development, and Artificial Intelligence. I am eager to learn, collaborate, and grow in the tech community.</p>
         </div>
-      </div>
 
-      <div class="cover-right">
-        <div class="cover-photo">
-          <img src="assets/cover.jpg" alt="Cover photo">
+        <div class="section">
+            <h2>Skills</h2>
+            <div class="skills">
+                <span>Video Editing</span>
+                <span>C++</span>
+                <span>Git & GitHub</span>
+                <span>DSA (Basics)</span>
+            </div>
         </div>
-      </div>
-    </section>
 
-    <section class="projects-grid" aria-label="Projects">
-      <article class="card-proj" data-index="0">
-        <div class="proj-media"><img src="assets/proj1.jpg" alt="Project 1"></div>
-        <div class="proj-title">Calculator (C++)</div>
-        <div class="proj-desc">Console based calculator demonstrating modular functions, input validation and a clean CLI menu.</div>
-        <div class="proj-meta"><span class="tag">C++</span><small class="muted">2024</small></div>
-      </article>
+        <div class="section">
+            <h2>Education</h2>
+            <p><strong>Matriculation(91%)</strong><br/>Meridian Academy(2022)</p>
+            <p><strong>Intermediate(91%)</strong><br/>Pvss DAV Public School(2024)</p>
+            <p><strong>B.Tech in Computer Science & Engineering</strong><br/>NIT ROURKELA(2025–2029)</p>
+        </div>
 
-      <article class="card-proj" data-index="1">
-        <div class="proj-media"><img src="assets/proj2.jpg" alt="Project 2"></div>
-        <div class="proj-title">Portfolio Website</div>
-        <div class="proj-desc">This responsive resume site built with HTML/CSS; includes download link and animated UI.</div>
-        <div class="proj-meta"><span class="tag">HTML/CSS</span><small class="muted">2025</small></div>
-      </article>
+        <div class="section">
+            <h2>Projects</h2>
+            <ul>
+                <li>Basic Calculator using C++</li>
+                <li>Portfolio Website (HTML/CSS)</li>
+            </ul>
+        </div>
 
-      <article class="card-proj" data-index="2">
-        <div class="proj-media"><img src="assets/proj3.jpg" alt="Project 3"></div>
-        <div class="proj-title">DSA Practice Repo</div>
-        <div class="proj-desc">Solved problems with explanations (arrays, strings, basic algorithms) — aimed at interview prep.</div>
-        <div class="proj-meta"><span class="tag">DSA</span><small class="muted">Ongoing</small></div>
-      </article>
-    </section>
+        <div class="section">
+            <h2>Social Links</h2>
+            <div class="social">
+                <a href="https://www.linkedin.com/in/p2the28?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank">LinkedIn</a>
+                <a href="https://github.com/P2THE28" target="_blank">GitHub</a>
+                <a href="https://www.instagram.com/p2the28?igsh=MWFsYWV6MTlteWR4cw==" target="_blank">Instagram</a>
+            </div>
+        </div>
 
-    <div class="spread">
-      <div class="pane">
-        <img src="assets/proj4.jpg" alt="Project 4">
-        <h3>Video Editing Mini-Projects</h3>
-        <p class="muted">Short clips for social and college events — color grading, cuts and pacing experiments.</p>
-      </div>
-      <div class="pane">
-        <img src="assets/proj5.jpg" alt="Project 5">
-        <h3>More Work</h3>
-        <p class="muted">Extra screenshots, small UI snippets and notes on algorithms.</p>
-      </div>
+        <div class="footer">© 2025 Priyanshu Kumar</div>
     </div>
-
-    <!-- Education section added back -->
-    <section class="education" style="margin-top:28px;background:var(--card);padding:18px;border-radius:12px;box-shadow:0 10px 25px rgba(8,20,50,0.04)">
-      <h2 style="margin:0 0 10px;color:var(--accent-2)">Education</h2>
-      <div class="edu-details" style="color:var(--muted);line-height:1.6">
-        <p><strong>Matriculation (91%)</strong><br><span style="color:#374151">Meridian Academy (2022)</span></p>
-        <p><strong>Intermediate (91%)</strong><br><span style="color:#374151">PVSS DAV Public School (2024)</span></p>
-        <p><strong>B.Tech — Computer Science & Engineering</strong><br><span style="color:#374151">NIT ROURKELA (2025 — 2029)</span></p>
-      </div>
-    </section>
-
-    <footer class="no-print">© 2025 PRIYANSHU KUMAR — <span class="muted">Built with ❤️</span></footer>
-    <footer class="print-footer" aria-hidden="true">© 2025 PRIYANSHU KUMAR</footer>
-  </div>
-
-  <!-- Lightbox markup -->
-  <div class="lightbox" id="lightbox" role="dialog" aria-hidden="true">
-    <div class="inner">
-      <img id="lightbox-img" src="" alt="">
-      <div class="nav">
-        <button id="prev">◀ Prev</button>
-        <button id="next">Next ▶</button>
-      </div>
-    </div>
-  </div>
-
-<script>
-// typed headline
-const words = ['Learning DSA', 'Web Dev', 'Competitive Programming', 'Video Editing'];
-let tI=0, tPos=0, forward=true;
-const el = document.getElementById('typed');
-function typeTick(){
-  const word = words[tI];
-  if(forward){
-    tPos++;
-    el.textContent = word.slice(0,tPos);
-    if(tPos===word.length){forward=false;setTimeout(typeTick,900);return}
-  } else {
-    tPos--;
-    el.textContent = word.slice(0,tPos);
-    if(tPos===0){forward=true;tI=(tI+1)%words.length}
-  }
-  setTimeout(typeTick, forward?80:40);
-}
-setTimeout(typeTick,600);
-
-// lightbox / slideshow
-const imgs = Array.from(document.querySelectorAll('.projects-grid .proj-media img'));
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.getElementById('lightbox-img');
-let cur = 0;
-function openLightbox(index){
-  cur = index;
-  lightboxImg.src = imgs[cur].src;
-  lightbox.classList.add('active');
-  lightbox.setAttribute('aria-hidden','false');
-}
-function closeLightbox(){
-  lightbox.classList.remove('active');
-  lightbox.setAttribute('aria-hidden','true');
-}
-imgs.forEach((img,i)=> img.addEventListener('click', ()=> openLightbox(i)));
-document.getElementById('next').addEventListener('click', ()=>{cur=(cur+1)%imgs.length;lightboxImg.src=imgs[cur].src});
-document.getElementById('prev').addEventListener('click', ()=>{cur=(cur-1+imgs.length)%imgs.length;lightboxImg.src=imgs[cur].src});
-lightbox.addEventListener('click', (e)=>{ if(e.target===lightbox) closeLightbox(); });
-
-// keyboard navigation
-document.addEventListener('keydown', (e)=>{
-  if(lightbox.classList.contains('active')){
-    if(e.key==='ArrowRight') document.getElementById('next').click();
-    if(e.key==='ArrowLeft') document.getElementById('prev').click();
-    if(e.key==='Escape') closeLightbox();
-  }
-});
-
-// image fallback placeholder
-document.querySelectorAll('img').forEach(img=>{
-  img.onerror = ()=> img.src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400"><rect width="100%" height="100%" fill="%23e6eefc"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="%236b7585" font-size="20">Replace assets/*.jpg</text></svg>';
-});
-
-// ensure project cards clickable on touch
-Array.from(document.querySelectorAll('.card-proj')).forEach((card,i)=>{
-  card.addEventListener('click', ()=> openLightbox(i));
-});
-</script>
 </body>
 </html>
