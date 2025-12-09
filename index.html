@@ -79,22 +79,42 @@
           <section class="skills" style="margin-top:18px">
             <h2>Skills</h2>
 
-<!-- Skill Chips UI -->
+            <style>
+              /* Card-style skills with icon on the left and text on the right */
+              .skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:14px}
+              .skill-card{background:#fafafa;border-radius:12px;padding:14px 16px;box-shadow:0 10px 28px rgba(8,20,50,0.04);display:flex;flex-direction:row;align-items:center;gap:14px;min-height:78px}
+              .skill-card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(8,20,50,0.08)}
+              .skill-icon{width:56px;height:56px;flex:0 0 56px;display:flex;align-items:center;justify-content:center}
+              .skill-content{display:flex;flex-direction:column}
+              .skill-title{font-weight:800;font-size:16px;margin:0 0 6px;color:var(--accent)}
+              .skill-desc{font-size:14px;color:var(--muted);margin:0}
 
+              /* responsive — stack vertically on very small screens */
+              @media(max-width:720px){
+                .skills-grid{grid-template-columns:1fr}
+                .skill-card{flex-direction:row;padding:12px;min-height:68px}
+                .skill-icon{width:48px;height:48px}
+                .skill-title{font-size:15px}
+              }
+              @media(max-width:420px){
+                .skill-card{flex-direction:column;align-items:flex-start;gap:8px}
+                .skill-icon{width:44px;height:44px}
+              }
+            </style>
 
-<div class="skills-grid"">
+            <div class="skills-grid">
               <div class="skill-card">
                 <div class="skill-icon" aria-hidden="true">
-                  <!-- New C++ learning icon (book + code) -->
-<svg width="56" height="56" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-  <rect rx="10" width="64" height="64" fill="#002a6d"/>
-  <g fill="#fff" transform="translate(14,14)">
-    <rect x="0" y="6" width="28" height="22" rx="3" fill="#1e3a8a"/>
-    <text x="14" y="20" text-anchor="middle" font-size="14" font-weight="700">C++</text>
-  </g>
-</svg>
+                  <!-- C++ icon -->
+                  <svg width="56" height="56" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                    <rect rx="10" width="64" height="64" fill="#002a6d"/>
+                    <g fill="#fff" transform="translate(14,14)">
+                      <rect x="0" y="6" width="28" height="22" rx="3" fill="#1e3a8a"/>
+                      <text x="14" y="20" text-anchor="middle" font-size="14" font-weight="700">C++</text>
+                    </g>
+                  </svg>
                 </div>
-                <div>
+                <div class="skill-content">
                   <div class="skill-title">C++ (Learning)</div>
                   <p class="skill-desc">Strong fundamentals — practice on arrays, strings and problem-solving.</p>
                 </div>
@@ -102,19 +122,19 @@
 
               <div class="skill-card">
                 <div class="skill-icon" aria-hidden="true">
-                  <!-- New DSA icon (tree/graph structure) -->
-<svg width="56" height="56" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-  <rect rx="10" width="64" height="64" fill="#0066ff"/>
-  <g stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" transform="translate(14,14)">
-    <circle cx="18" cy="4" r="4"/>
-    <circle cx="6" cy="22" r="4"/>
-    <circle cx="30" cy="22" r="4"/>
-    <line x1="18" y1="8" x2="6" y2="18"/>
-    <line x1="18" y1="8" x2="30" y2="18"/>
-  </g>
-</svg>
+                  <!-- DSA icon -->
+                  <svg width="56" height="56" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                    <rect rx="10" width="64" height="64" fill="#0066ff"/>
+                    <g stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" transform="translate(14,14)">
+                      <circle cx="18" cy="4" r="4"/>
+                      <circle cx="6" cy="22" r="4"/>
+                      <circle cx="30" cy="22" r="4"/>
+                      <line x1="18" y1="8" x2="6" y2="18"/>
+                      <line x1="18" y1="8" x2="30" y2="18"/>
+                    </g>
+                  </svg>
                 </div>
-                <div>
+                <div class="skill-content">
                   <div class="skill-title">DSA (Learning)</div>
                   <p class="skill-desc">Currently learning Data Structures & Algorithms with focus on problem‑solving.</p>
                 </div>
@@ -122,7 +142,7 @@
 
               <div class="skill-card">
                 <div class="skill-icon" aria-hidden="true">
-                  <!-- Git / GitHub style (branch) -->
+                  <!-- Git icon -->
                   <svg width="56" height="56" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img">
                     <rect rx="10" width="64" height="64" fill="#222" />
                     <g transform="translate(12,12) scale(0.7)" fill="#fff">
@@ -134,7 +154,7 @@
                     </g>
                   </svg>
                 </div>
-                <div>
+                <div class="skill-content">
                   <div class="skill-title">Git & GitHub</div>
                   <p class="skill-desc">Version control — branching, PRs, and repository organisation.</p>
                 </div>
@@ -142,7 +162,7 @@
 
               <div class="skill-card">
                 <div class="skill-icon" aria-hidden="true">
-                  <!-- Video clapper (video editing) -->
+                  <!-- Video icon -->
                   <svg width="56" height="56" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img">
                     <rect rx="10" width="64" height="64" fill="#111827" />
                     <g transform="translate(10,14) scale(0.9)" fill="#fff">
@@ -152,7 +172,7 @@
                     </g>
                   </svg>
                 </div>
-                <div>
+                <div class="skill-content">
                   <div class="skill-title">Video Editing</div>
                   <p class="skill-desc">Basic editing, color grading and short-form content for socials/events.</p>
                 </div>
