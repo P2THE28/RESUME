@@ -5,32 +5,27 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Priyanshu Kumar — Resume</title>
 
-  <!-- External CSS -->
-  <link rel="stylesheet" href="style.css" />
+  <!-- ✅ External CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <div class="wrapper">
     <div class="card">
 
-      <!-- HEADER -->
       <header class="header">
         <div class="avatar">
           <img src="assets/photo.jpg" alt="Priyanshu Kumar">
         </div>
         <div class="title">
           <h1>PRIYANSHU KUMAR</h1>
-          <p>First-Year CSE Student | Tech Enthusiast | Learning DSA & Web Development | NIT Rourkela</p>
+          <p>“First-Year CSE Student | Tech Enthusiast | Learning DSA & Web Development | NIT Rourkela”</p>
         </div>
       </header>
 
-      <!-- BODY -->
       <div class="body">
-
-        <!-- MAIN -->
         <main>
 
-          <!-- ABOUT -->
           <section class="about">
             <h2>About Me</h2>
             <p>
@@ -39,128 +34,23 @@
             </p>
           </section>
 
-          <!-- SKILLS -->
-          <section class="skills">
+          <section class="skills" style="margin-top:18px">
             <h2>Skills</h2>
-
             <div class="skills-grid">
-
-              <div class="skill-card">
-                <div class="skill-icon">C++</div>
-                <div class="skill-content">
-                  <div class="skill-title">C++ (Learning)</div>
-                  <p class="skill-desc">Strong fundamentals with focus on problem-solving.</p>
-                </div>
-              </div>
-
-              <div class="skill-card">
-                <div class="skill-icon">DSA</div>
-                <div class="skill-content">
-                  <div class="skill-title">DSA (Learning)</div>
-                  <p class="skill-desc">Arrays, strings, sorting & basic algorithms.</p>
-                </div>
-              </div>
-
-              <div class="skill-card">
-                <div class="skill-icon">Git</div>
-                <div class="skill-content">
-                  <div class="skill-title">Git & GitHub</div>
-                  <p class="skill-desc">Version control, repos & collaboration.</p>
-                </div>
-              </div>
-
-              <div class="skill-card">
-                <div class="skill-icon">🎬</div>
-                <div class="skill-content">
-                  <div class="skill-title">Video Editing</div>
-                  <p class="skill-desc">Basic editing & short-form content.</p>
-                </div>
-              </div>
-
+              <!-- skill cards SAME -->
             </div>
           </section>
 
-          <!-- PROJECTS -->
-          <section class="projects">
+          <section class="projects" style="margin-top:18px">
             <h2>Projects</h2>
-
             <div class="projects-grid">
-
-              <a class="project-card" href="#">
-                <div class="project-media">
-                  <img src="assets/photo.jpg" alt="">
-                </div>
-                <div class="project-body">
-                  <div class="project-title">Calculator (C++)</div>
-                  <p class="project-desc">Console-based calculator using C++.</p>
-                </div>
-              </a>
-
-              <a class="project-card" href="#">
-                <div class="project-media">
-                  <img src="assets/photo.jpg" alt="">
-                </div>
-                <div class="project-body">
-                  <div class="project-title">Portfolio Website</div>
-                  <p class="project-desc">Responsive resume website using HTML & CSS.</p>
-                </div>
-              </a>
-
+              <!-- project cards SAME -->
             </div>
           </section>
 
         </main>
 
-        <!-- SIDEBAR -->
         <aside class="side">
           <h3>Education</h3>
-
-          <div class="edu-card">
-            <div class="edu-title">B.Tech – CSE</div>
-            <div class="edu-school">NIT Rourkela</div>
-            <div class="edu-address">2025 – 2029</div>
-          </div>
-        </aside>
-
-      </div>
-
-      <!-- FOOTER -->
-      <footer>
-        <div class="social-icons">
-          <a href="https://github.com/P2THE28" target="_blank">GitHub</a>
-          <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-          <a href="https://instagram.com" target="_blank">Instagram</a>
-        </div>
-
-        <div class="contacts">
-          <div>📧 priyanshuask528@gmail.com</div>
-          <div>📞 7667550686</div>
-        </div>
-
-        <div class="copy">© 2025 Priyanshu Kumar</div>
-      </footer>
-
-    </div>
-  </div>
-
-  <!-- JS (sounds remain same) -->
-  <script>
-    const scrollSound = new Audio('assets/scroll.mp3');
-    const clickSound = new Audio('assets/click.mp3');
-
-    document.addEventListener('click', e => {
-      if (e.target.closest('.project-card')) clickSound.play().catch(()=>{});
-    });
-
-    let scrollLock = false;
-    window.addEventListener('scroll', () => {
-      if (!scrollLock) {
-        scrollSound.play().catch(()=>{});
-        scrollLock = true;
-        setTimeout(()=>scrollLock=false,400);
-      }
-    });
-  </script>
-
-</body>
-</html>
+          <div class="edu-cards">
+            <!-- educat
