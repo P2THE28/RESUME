@@ -1,4 +1,4 @@
-<script>
+
     /* small script to trigger progress bar animations once page loads */
     window.addEventListener('load', () => {
       // ensure bars have width set inline (already are) — this restarts animation if needed
@@ -11,7 +11,7 @@
   </script>
   
   <!-- 🔊 Scroll & Click Sounds -->
-  <script>
+  
     // Preload audio
     const scrollSound = new Audio('assets/scroll.mp3');
     const clickSound = new Audio('assets/click.mp3');
@@ -34,4 +34,3 @@
         setTimeout(()=> scrollTimeout = false, 400);
       }
     });
-  </script>
