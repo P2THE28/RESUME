@@ -44,7 +44,7 @@
     @keyframes fillbar{0%{width:0}100%{width:70%}}
     .muted{color:var(--muted)}
     .social-icons a { display:inline-block; margin-right:12px; transition:transform .18s ease, opacity .18s ease; }
-    .social-icons a:hover { transform:translateY(-4px) scale(1.08); opacity:0.9; 
+    .social-icons a:hover { transform:translateY(-4px) scale(1.08); opacity:0.9; }
 
 
 /* Card-style skills with icon on the left and text on the right */
