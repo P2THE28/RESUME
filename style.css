@@ -198,4 +198,24 @@ h3{
   height:22px;
 }
 
+/* PDF-exact spacing for About Me text */
+.grid section p {
+  margin-top: 6px;
+  margin-bottom: 0;
+  line-height: 1.55;
+}
+
+/* Match PDF column spacing */
+.grid {
+  gap: 20px;
+}
+
+/* Reduce extra heading space */
+h2 {
+  margin-bottom: 8px;
+}
+
+
+
+
 
