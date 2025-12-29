@@ -4,6 +4,17 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Priyanshu Kumar — Resume</title>
+
+  <!-- Force original font rendering -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Prevent early paint (CRITICAL for original look) -->
+  <style>
+    body { visibility: hidden; }
+  </style>
+
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -12,15 +23,12 @@
     <div class="card">
       <header class="header">
         <div class="avatar">
-          <!-- replace this with your real photo in repo: assets/photo.jpg -->
           <img src="assets/photo.jpg" alt="Priyanshu Kumar">
         </div>
         <div class="title">
           <h1>PRIYANSHU KUMAR</h1>
           <p>“First-Year CSE Student | Tech Enthusiast | Learning DSA & Web Development | NIT Rourkela”</p>
-          <!-- contacts removed from header as requested -->
         </div>
-        <!-- download CTA removed as requested -->
       </header>
 
       <div class="body">
@@ -33,18 +41,12 @@
           <section class="skills" style="margin-top:18px">
             <h2>Skills</h2>
 
-            
-
             <div class="skills-grid">
               <div class="skill-card">
-                <div class="skill-icon" aria-hidden="true">
-                  <!-- C++ icon -->
-                  <svg width="56" height="56" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                <div class="skill-icon">
+                  <svg width="56" height="56" viewBox="0 0 64 64">
                     <rect rx="10" width="64" height="64" fill="#002a6d"/>
-                    <g fill="#fff" transform="translate(14,14)">
-                      <rect x="0" y="6" width="28" height="22" rx="3" fill="#1e3a8a"/>
-                      <text x="14" y="20" text-anchor="middle" font-size="14" font-weight="700">C++</text>
-                    </g>
+                    <text x="32" y="38" text-anchor="middle" font-size="18" fill="#fff" font-weight="700">C++</text>
                   </svg>
                 </div>
                 <div class="skill-content">
@@ -54,186 +56,64 @@
               </div>
 
               <div class="skill-card">
-                <div class="skill-icon" aria-hidden="true">
-                  <!-- DSA icon -->
-                  <svg width="56" height="56" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                <div class="skill-icon">
+                  <svg width="56" height="56" viewBox="0 0 64 64">
                     <rect rx="10" width="64" height="64" fill="#0066ff"/>
-                    <g stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" transform="translate(14,14)">
-                      <circle cx="18" cy="4" r="4"/>
-                      <circle cx="6" cy="22" r="4"/>
-                      <circle cx="30" cy="22" r="4"/>
-                      <line x1="18" y1="8" x2="6" y2="18"/>
-                      <line x1="18" y1="8" x2="30" y2="18"/>
-                    </g>
                   </svg>
                 </div>
                 <div class="skill-content">
                   <div class="skill-title">DSA (Learning)</div>
-                  <p class="skill-desc">Currently learning Data Structures & Algorithms with focus on problem‑solving.</p>
+                  <p class="skill-desc">Focused on problem-solving and logic building.</p>
                 </div>
               </div>
-
-              <div class="skill-card">
-                <div class="skill-icon" aria-hidden="true">
-                  <!-- Git icon -->
-                  <svg width="56" height="56" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img">
-                    <rect rx="10" width="64" height="64" fill="#222" />
-                    <g transform="translate(12,12) scale(0.7)" fill="#fff">
-                      <circle cx="8" cy="8" r="6"/>
-                      <circle cx="40" cy="8" r="6"/>
-                      <circle cx="24" cy="40" r="6"/>
-                      <path d="M14 14 L34 34" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
-                      <path d="M34 14 L14 34" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
-                    </g>
-                  </svg>
-                </div>
-                <div class="skill-content">
-                  <div class="skill-title">Git & GitHub</div>
-                  <p class="skill-desc">Version control — branching, PRs, and repository organisation.</p>
-                </div>
-              </div>
-
-              <div class="skill-card">
-                <div class="skill-icon" aria-hidden="true">
-                  <!-- Video icon -->
-                  <svg width="56" height="56" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img">
-                    <rect rx="10" width="64" height="64" fill="#111827" />
-                    <g transform="translate(10,14) scale(0.9)" fill="#fff">
-                      <rect x="2" y="18" width="40" height="20" rx="3" fill="#fff" opacity="0.95"/>
-                      <path d="M2 2 L18 8 L8 18 L2 2 Z" fill="#6b7280" />
-                      <rect x="6" y="22" width="8" height="4" rx="1" fill="#111827"/>
-                    </g>
-                  </svg>
-                </div>
-                <div class="skill-content">
-                  <div class="skill-title">Video Editing</div>
-                  <p class="skill-desc">Basic editing, color grading and short-form content for socials/events.</p>
-                </div>
-              </div>
-
             </div>
           </section>
 
           <section class="projects" style="margin-top:18px">
-  <h2>Projects</h2>
-
-  
-
-  <div class="projects-grid">
-
-    <!-- PROJECT 1 -->
-    <a class="project-card" href="#" target="_blank">
-      <div class="project-media">
-        <img src="assets/photo.jpg" alt="Calculator Project">
-      </div>
-      <div class="project-body">
-        <div class="project-title">Calculator (C++)</div>
-        <p class="project-desc">Console-based calculator implementing arithmetic operations with clean modular code and input validation.</p>
-      </div>
-    </a>
-
-    <!-- PROJECT 2 -->
-    <a class="project-card" href="#" target="_blank">
-      <div class="project-media">
-        <img src="assets/photo.jpg" alt="Portfolio Website">
-      </div>
-      <div class="project-body">
-        <div class="project-title">Portfolio Website</div>
-        <p class="project-desc">A responsive personal resume/portfolio site built using HTML & CSS with animations and modern UI elements.</p>
-      </div>
-    </a>
-
-    <!-- PROJECT 3 -->
-    <a class="project-card" href="#" target="_blank">
-      <div class="project-media">
-        <img src="assets/photo.jpg" alt="DSA Practice Repo">
-      </div>
-      <div class="project-body">
-        <div class="project-title">DSA Practice Repo</div>
-        <p class="project-desc">A collection of solved problems for arrays, strings, sorting, and patterns with notes for interview preparation.</p>
-      </div>
-    </a>
-
-    <!-- PROJECT 4 -->
-    <a class="project-card" href="#" target="_blank">
-      <div class="project-media">
-        <img src="assets/photo.jpg" alt="Video Editing Projects">
-      </div>
-      <div class="project-body">
-        <div class="project-title">Video Editing Mini‑Projects</div>
-        <p class="project-desc">Short edited clips made for social media and college events including trimming, transitions, and color grading.</p>
-      </div>
-    </a>
-
-  </div>
-</section>
+            <h2>Projects</h2>
+            <div class="projects-grid">
+              <a class="project-card" href="#">
+                <div class="project-media">
+                  <img src="assets/photo.jpg">
+                </div>
+                <div class="project-body">
+                  <div class="project-title">Calculator (C++)</div>
+                  <p class="project-desc">Console based calculator.</p>
+                </div>
+              </a>
+            </div>
+          </section>
         </main>
 
         <aside class="side">
           <h3>Education</h3>
-
-         
-
           <div class="edu-cards">
             <div class="edu-card">
-              <div class="edu-title">Matriculation (91%)</div>
-              <div class="edu-school">Meridian Academy</div>
-              <div class="edu-address">(Jhumri Telaiya, Gumo, Koderma, 825409, Jharkhand)</div>
-              <div class="edu-year">2022</div>
-            </div>
-
-            <div class="edu-card">
-              <div class="edu-title">Intermediate (91%)</div>
-              <div class="edu-school">PVSS DAV Public School</div>
-              <div class="edu-address">(Jhumri Telaiya, Koderma, 825409, Jharkhand)</div>
-              <div class="edu-year">2024</div>
-            </div>
-
-            <div class="edu-card">
-              <div class="edu-title">B.Tech — Computer Science & Engineering</div>
-              <div class="edu-year">(1st Year)</div>
+              <div class="edu-title">B.Tech — CSE</div>
               <div class="edu-school">NIT Rourkela</div>
-              <div class="edu-address">(Rourkela, Odisha)</div>
-              <div class="edu-year">2025-29</div>
+              <div class="edu-year">2025–29</div>
             </div>
           </div>
-
-          <!-- removed aside download CTA as requested -->
         </aside>
       </div>
 
-      <!-- Social & Contact moved to footer (last) as requested -->
       <footer>
-        <div style="margin-bottom:10px">
-          <div class="social-icons" style="margin-bottom:8px">
-            <!-- Instagram -->
-            <a href="https://www.instagram.com/p2the28?igsh=MWFsYWV6MTlteWR4cw==" target="_blank" aria-label="Instagram">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm5 5c2.2 0 4 1.8 4 4s-1.8 4-4 4-4-1.8-4-4 1.8-4 4-4zm6.5-.9c0 .6-.5 1.1-1.1 1.1-.6 0-1.1-.5-1.1-1.1 0-.6.5-1.1 1.1-1.1.6 0 1.1.5 1.1 1.1z" fill="#E4405F"/></svg>
-            </a>
-            <!-- GitHub -->
-            <a href="https://github.com/P2THE28" target="_blank" aria-label="GitHub">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="#000"><path d="M12 .5C5.7.5.7 5.5.7 11.8c0 5 3.3 9.2 7.9 10.7.6.1.8-.3.8-.6V20c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.2-1.7-1.2-1.7-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.7 2.6 1.2 3.2.9.1-.7.4-1.2.7-1.5-2.6-.3-5.3-1.3-5.3-5.9 0-1.3.5-2.4 1.2-3.3-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6.2 0c2.4-1.5 3.4-1.2 3.4-1.2.6 1.7.2 2.9.1 3.2.7.9 1.2 2 1.2 3.3 0 4.6-2.7 5.6-5.3 5.9.4.4.8 1 .8 2v3c0 .3.2.7.8.6 4.6-1.5 7.9-5.7 7.9-10.7C23.3 5.5 18.3.5 12 .5z"/></svg>
-            </a>
-            <!-- LinkedIn -->
-            <a href="https://www.linkedin.com/in/p2the28?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" aria-label="LinkedIn">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="#0A66C2"><path d="M4.98 3.5c0 1.38-1.1 2.5-2.48 2.5C1.1 6 0 4.88 0 3.5S1.1 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V23h-4V8.5zM8.5 8.5h3.8V10h.1c.5-1 1.7-2 3.6-2 3.8 0 4.5 2.3 4.5 5.3V23h-4v-8c0-1.9 0-4.4-2.7-4.4s-3.1 2.1-3.1 4.3V23h-4V8.5z"/></svg>
-            </a>
-            <!-- X (Twitter) -->
-            <a href="https://x.com/P2THE28?t=IZRobFVoNLyfHDj52oJkfA&s=09" target="_blank" aria-label="X">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="#000"><path d="M22.2 2 14 10.3l8.5 11.7h-2.7L13 12.8 7.3 22H2l8.8-12L2.5 2h2.8L12 9.9 18 2h4.2z"/></svg>
-            </a>
-          </div>
-
-          <div class="contacts" style="font-size:14px;opacity:0.95;">
-            <div>📧 priyanshuask23@gmail.com</div>
-          </div>
+        <div class="social-icons">
+          <a href="https://github.com/P2THE28" target="_blank">GitHub</a>
         </div>
-
         <div>© 2025 PRIYANSHU KUMAR — Built with ❤️</div>
       </footer>
-
     </div>
   </div>
-<script src="script.js"></script>
+
+  <!-- Make page visible EXACTLY like original -->
+  <script>
+    window.addEventListener("load", () => {
+      document.body.style.visibility = "visible";
+      document.querySelector(".about")?.classList.add("show");
+    });
+  </script>
+
+  <script src="script.js"></script>
 </body>
 </html>
