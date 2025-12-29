@@ -15,23 +15,23 @@ body{
   padding:18mm 0;
 }
 
-.header-inner{
-  width: 210mm;
-  margin: auto;
-  display:flex;
-  align-items:center;
-  gap:18px;
-  color:white;
+.header-inner h1{
+  font-size:34px;     /* increase name size */
+  font-weight:800;
+  letter-spacing:0.5px;
+  margin:0;
 }
 
 
+
 .avatar{
-  width:80px;
-  height:80px;
+  width:96px;          /* increase logo size */
+  height:96px;
   border-radius:50%;
   border:4px solid rgba(255,255,255,.35);
   object-fit:cover;
 }
+
 
 /* A4 PAGE SIMULATION */
 .container{
