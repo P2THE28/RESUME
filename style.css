@@ -5,23 +5,25 @@
 
 body{
   margin:0;
-  background:#f4f7fb;
+  background:#e5e7eb;  /* light grey like PDF viewer */
   color:#0b1220;
+  font-family: Inter, system-ui, Arial;
 }
 
 .header{
   background:linear-gradient(135deg,#1e3a8a,#2563eb);
-  padding:28px;
-  color:white;
+  padding:18mm 0;
 }
 
 .header-inner{
-  max-width:1100px;
-  margin:auto;
+  width: 210mm;
+  margin: auto;
   display:flex;
   align-items:center;
   gap:18px;
+  color:white;
 }
+
 
 .avatar{
   width:80px;
@@ -125,3 +127,33 @@ h3{
   width:22px;
   height:22px;
 }
+
+@media (max-width: 900px){
+  .container,
+  .header-inner{
+    width: 100%;
+    min-height: auto;
+    padding: 20px;
+    border-radius: 0;
+  }
+}
+
+@media print {
+  body{
+    background: white;
+  }
+
+  .container{
+    box-shadow: none;
+    margin: 0;
+    width: 210mm;
+    min-height: 297mm;
+    border-radius: 0;
+  }
+
+  .footer{
+    page-break-inside: avoid;
+  }
+}
+
+
