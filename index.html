@@ -1,142 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Priyanshu Kumar — Resume</title>
 
-  <!-- Force original font rendering -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Prevent early paint (CRITICAL for original look) -->
-  <style>
-    body { visibility: hidden; }
-  </style>
-
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <div class="wrapper">
-    <div class="card">
-      <header class="header">
-        <div class="avatar">
-          <img src="assets/photo.jpg" alt="Priyanshu Kumar">
+
+  <!-- HEADER -->
+  <header class="top">
+    <div class="top-inner">
+      <img src="assets/photo.jpg" class="profile-pic" alt="Priyanshu Kumar">
+      <div>
+        <h1>PRIYANSHU KUMAR</h1>
+        <p class="tagline">
+          “First-Year CSE Student | Tech Enthusiast | Learning DSA & Web Development | NIT Rourkela”
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- ABOUT + EDUCATION -->
+    <section class="grid-two">
+      <div>
+        <h2>About Me</h2>
+        <p>
+          I am a first-year undergraduate student pursuing Computer Science and Engineering at NIT Rourkela.
+          I am passionate about technology, programming, and problem-solving. Currently, I am exploring
+          different fields in computer science such as Data Structures, Algorithms, Web Development, and
+          Artificial Intelligence. I am eager to learn, collaborate, and grow in the tech community.
+        </p>
+      </div>
+
+      <aside>
+        <h2>Education</h2>
+
+        <div class="edu">
+          <strong>Matriculation (91%)</strong>
+          <span>Meridian Academy</span>
+          <span>(Jhumri Telaiya, Gumo, Koderma, 825409, Jharkhand)</span>
+          <span class="year">2022</span>
         </div>
-        <div class="title">
-          <h1>PRIYANSHU KUMAR</h1>
-          <p>“First-Year CSE Student | Tech Enthusiast | Learning DSA & Web Development | NIT Rourkela”</p>
+
+        <div class="edu">
+          <strong>Intermediate (91%)</strong>
+          <span>PVSS DAV Public School</span>
+          <span>(Jhumri Telaiya, Koderma, 825409, Jharkhand)</span>
+          <span class="year">2024</span>
         </div>
-      </header>
 
-      <div class="body">
-        <main>
-          <section class="about">
-            <h2>About Me</h2>
-            <p>I am a first-year undergraduate student pursuing Computer Science and Engineering at NIT Rourkela. I am passionate about technology, programming, and problem-solving. Currently, I am exploring different fields in computer science such as Data Structures, Algorithms, Web Development, and Artificial Intelligence. I am eager to learn, collaborate, and grow in the tech community.</p>
-          </section>
-
-          <section class="skills" style="margin-top:18px">
-            <h2>Skills</h2>
-
-            <div class="skills-grid">
-              <div class="skill-card">
-                <div class="skill-icon">
-                  <svg width="56" height="56" viewBox="0 0 64 64">
-                    <rect rx="10" width="64" height="64" fill="#002a6d"/>
-                    <text x="32" y="38" text-anchor="middle" font-size="18" fill="#fff" font-weight="700">C++</text>
-                  </svg>
-                </div>
-                <div class="skill-content">
-                  <div class="skill-title">C++ (Learning)</div>
-                  <p class="skill-desc">Strong fundamentals — practice on arrays, strings and problem-solving.</p>
-                </div>
-              </div>
-
-              <div class="skill-card">
-                <div class="skill-icon">
-                  <svg width="56" height="56" viewBox="0 0 64 64">
-                    <rect rx="10" width="64" height="64" fill="#0066ff"/>
-                  </svg>
-                </div>
-                <div class="skill-content">
-                  <div class="skill-title">DSA (Learning)</div>
-                  <p class="skill-desc">Focused on problem-solving and logic building.</p>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section class="projects" style="margin-top:18px">
-            <h2>Projects</h2>
-            <div class="projects-grid">
-              <a class="project-card" href="#">
-                <div class="project-media">
-                  <img src="assets/photo.jpg">
-                </div>
-                <div class="project-body">
-                  <div class="project-title">Calculator (C++)</div>
-                  <p class="project-desc">Console based calculator.</p>
-                </div>
-              </a>
-            </div>
-          </section>
-        </main>
-
-        <aside class="side">
-  <h3>Education</h3>
-
-  <div class="edu-cards">
-    <div class="edu-card">
-      <div class="edu-title">Matriculation (91%)</div>
-      <div class="edu-school">Meridian Academy</div>
-      <div class="edu-address">
-        (Jhumri Telaiya, Gumo, Koderma, 825409, Jharkhand)
-      </div>
-      <div class="edu-year">2022</div>
-    </div>
-
-    <div class="edu-card">
-      <div class="edu-title">Intermediate (91%)</div>
-      <div class="edu-school">PVSS DAV Public School</div>
-      <div class="edu-address">
-        (Jhumri Telaiya, Koderma, 825409, Jharkhand)
-      </div>
-      <div class="edu-year">2024</div>
-    </div>
-
-    <div class="edu-card">
-      <div class="edu-title">B.Tech — Computer Science & Engineering</div>
-      <div class="edu-school">NIT Rourkela</div>
-      <div class="edu-address">
-        (Rourkela, Odisha)
-      </div>
-      <div class="edu-year">2025–2029</div>
-    </div>
-  </div>
-</aside>
-
-      </div>
-
-      <footer>
-        <div class="social-icons">
-          <a href="https://github.com/P2THE28" target="_blank">GitHub</a>
+        <div class="edu">
+          <strong>B.Tech — Computer Science & Engineering</strong>
+          <span>(1st Year)</span>
+          <span>NIT Rourkela</span>
+          <span>(Rourkela, Odisha)</span>
+          <span class="year">2025–29</span>
         </div>
-        <div>© 2025 PRIYANSHU KUMAR — Built with ❤️</div>
-      </footer>
-    </div>
-  </div>
+      </aside>
+    </section>
 
-  <!-- Make page visible EXACTLY like original -->
-  <script>
-    window.addEventListener("load", () => {
-      document.body.style.visibility = "visible";
-      document.querySelector(".about")?.classList.add("show");
-    });
-  </script>
+    <!-- SKILLS -->
+    <section>
+      <h2>Skills</h2>
+      <div class="skills">
+        <span>C++ (Learning)</span>
+        <span>DSA (Learning)</span>
+        <span>Git & GitHub</span>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>Video Editing</span>
+      </div>
+    </section>
 
-  <script src="script.js"></script>
+    <!-- PROJECTS -->
+    <section>
+      <h2>Projects</h2>
+
+      <div class="project">
+        <strong>Calculator (C++)</strong>
+        <p>
+          Console-based calculator implementing arithmetic operations with clean modular
+          code and input validation.
+        </p>
+      </div>
+
+      <div class="project">
+        <strong>Portfolio Website</strong>
+        <p>
+          A responsive personal resume/portfolio site built using HTML & CSS with animations
+          and modern UI elements.
+        </p>
+      </div>
+
+      <div class="project">
+        <strong>AI Startup Success Predictor</strong>
+        <p>
+          AI based startup success prediction web project. Built using HTML, CSS,
+          JavaScript and Python.
+        </p>
+        <a href="https://huggingface.co/spaces/Vibranium0/Vibranium_ai_success_predictor" target="_blank">
+          Live Project
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>📧 priyanshuask528@gmail.com</p>
+  </footer>
+
 </body>
 </html>
