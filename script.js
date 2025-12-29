@@ -8,7 +8,7 @@
         setTimeout(()=> el.style.width = w, 100);
       });
     });
-  </script>
+ 
   
   <!-- 🔊 Scroll & Click Sounds -->
   
