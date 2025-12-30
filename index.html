@@ -9,17 +9,24 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
 
 <!-- HEADER -->
 <header class="header">
   <div class="header-inner">
-    <img src="assets/photo.jpg" class="avatar">
-    <div>
-      <h1>PRIYANSHU KUMAR</h1>
-      <p>“First-Year CSE Student | Tech Enthusiast | Learning DSA & Web Development | NIT Rourkela”</p>
+    <div style="display:flex;align-items:center;gap:16px;">
+      <img src="assets/photo.jpg" class="avatar" alt="Priyanshu Kumar photo">
+      <div>
+        <h1>PRIYANSHU KUMAR</h1>
+        <p>“First-Year CSE Student | Tech Enthusiast | Learning DSA & Web Development | NIT Rourkela”</p>
+      </div>
+    </div>
+
+    <div class="header-actions" style="margin-left:auto;display:flex;align-items:center;gap:12px;">
+      <a class="btn" href="assets/resume.pdf" download aria-label="Download resume">Resume</a>
+      <button id="themeToggle" class="theme-toggle" aria-pressed="false" aria-label="Toggle theme">🌓</button>
     </div>
   </div>
 </header>
@@ -37,6 +44,52 @@
         different fields in computer science such as Data Structures, Algorithms, Web Development, and
         Artificial Intelligence. I am eager to learn, collaborate, and grow in the tech community.
       </p>
+
+      <h2 style="margin-top:18px">Skills</h2>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-icon">
+            <img src="assets/cpp.svg" alt="C++">
+          </div>
+          <span>C++ (Learning)</span>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">
+            <img src="assets/dsa.svg" alt="DSA">
+          </div>
+          <span>DSA (Learning)</span>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">
+            <img src="assets/github.svg" alt="GitHub">
+          </div>
+          <span>Git & GitHub</span>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">
+            <img src="assets/html.svg" alt="HTML">
+          </div>
+          <span>HTML</span>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">
+            <img src="assets/css.svg" alt="CSS">
+          </div>
+          <span>CSS</span>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">
+            <img src="assets/video.svg" alt="Video Editing">
+          </div>
+          <span>Video Editing</span>
+        </div>
+      </div>
     </section>
 
     <aside class="card">
@@ -63,73 +116,69 @@
         <span>(Rourkela, Odisha)</span>
         <span class="year">2025–29</span>
       </div>
+
     </aside>
   </div>
-
-  <!-- SKILLS -->
-  <h2>Skills</h2>
-
-<div class="skills-grid">
-  <div class="skill-card">
-    <div class="skill-icon">
-      <img src="assets/cpp.svg" alt="C++">
-    </div>
-    <span>C++ (Learning)</span>
-  </div>
-
-  <div class="skill-card">
-    <div class="skill-icon">
-      <img src="assets/dsa.svg" alt="DSA">
-    </div>
-    <span>DSA (Learning)</span>
-  </div>
-
-  <div class="skill-card">
-    <div class="skill-icon">
-      <img src="assets/github.svg" alt="GitHub">
-    </div>
-    <span>Git & GitHub</span>
-  </div>
-
-  <div class="skill-card">
-    <div class="skill-icon">
-      <img src="assets/html.svg" alt="HTML">
-    </div>
-    <span>HTML</span>
-  </div>
-
-  <div class="skill-card">
-    <div class="skill-icon">
-      <img src="assets/css.svg" alt="CSS">
-    </div>
-    <span>CSS</span>
-  </div>
-
-  <div class="skill-card">
-    <div class="skill-icon">
-      <img src="assets/video.svg" alt="Video Editing">
-    </div>
-    <span>Video Editing</span>
-  </div>
-</div>
 
   <!-- PROJECTS -->
   <h2>Projects</h2>
 
-  <div class="project-card">
-    <strong>Calculator (C++)</strong>
-    <p>Console-based calculator implementing arithmetic operations with clean modular code and input validation.</p>
+  <div class="projects-grid">
+    <article class="project-card" data-title="Calculator (C++)" data-desc="Console-based calculator implementing arithmetic operations with clean modular code and input validation." data-link="" tabindex="0">
+      <div class="project-media">
+        <img src="assets/project-calc.jpg" alt="Calculator project screenshot">
+      </div>
+      <div class="project-body">
+        <h4>Calculator (C++)</h4>
+        <p>Console-based calculator with modular code and input validation.</p>
+        <div class="project-meta">
+          <span class="tag">C++</span>
+          <button class="view-project" type="button">View</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="project-card" data-title="Portfolio Website" data-desc="A responsive personal resume/portfolio site built using HTML & CSS with animations and modern UI elements." data-link="" tabindex="0">
+      <div class="project-media">
+        <img src="assets/project-portfolio.jpg" alt="Portfolio project screenshot">
+      </div>
+      <div class="project-body">
+        <h4>Portfolio Website</h4>
+        <p>Responsive resume site with subtle animations and modern layout.</p>
+        <div class="project-meta">
+          <span class="tag">HTML • CSS</span>
+          <button class="view-project" type="button">View</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="project-card" data-title="AI Startup Success Predictor" data-desc="AI based startup success prediction web project. Built using HTML, CSS, JavaScript and Python." data-link="https://huggingface.co/spaces/Vibranium0/Vibranium_ai_success_predictor" tabindex="0">
+      <div class="project-media">
+        <img src="assets/project-ai.jpg" alt="AI project screenshot">
+      </div>
+      <div class="project-body">
+        <h4>AI Startup Success Predictor</h4>
+        <p>AI-based startup success prediction web project using Python and JS frontend.</p>
+        <div class="project-meta">
+          <span class="tag">Python • JS</span>
+          <button class="view-project" type="button">Live</button>
+        </div>
+      </div>
+    </article>
   </div>
 
-  <div class="project-card">
-    <strong>Portfolio Website</strong>
-    <p>A responsive personal resume/portfolio site built using HTML & CSS with animations and modern UI elements.</p>
-  </div>
-
-  <div class="project-card">
-    <strong>AI Startup Success Predictor</strong>
-    <p>AI based startup success prediction web project. Built using HTML, CSS, JavaScript and Python.</p>
-    <a href="https://huggingface.co/spaces/Vibranium0/Vibranium_ai_success_predictor" target="_blank">Live Project</a>
+  <!-- Project modal -->
+  <div id="projectModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle" aria-describedby="modalDesc">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content" role="document">
+      <button class="modal-close" aria-label="Close">✕</button>
+      <div class="modal-media"><img src="" alt=""></div>
+      <h3 id="modalTitle"></h3>
+      <p id="modalDesc"></p>
+      <div class="modal-actions">
+        <a id="modalLink" href="#" target="_blank" class="btn">Open Project</a>
+      </div>
+    </div>
   </div>
 
 </div>
@@ -137,22 +186,29 @@
 <!-- FOOTER -->
 <footer class="footer">
   <div class="footer-pill">
-    <a href="https://www.linkedin.com/in/p2the28" target="_blank">
-      <img src="assets/linklogo.png">
-    </a>
-    <a href="https://github.com/P2THE28" target="_blank">
-      <img src="assets/gitlogo.png">
-    </a>
-    <a href="https://www.instagram.com/p2the28" target="_blank">
-      <img src="assets/insatlogo.png">
-    </a>
-    <a href="https://x.com/P2THE28" target="_blank">
-      <img src="assets/xlogo.png">
-    </a>
-    <br>
-    <span>📧 priyanshuask528@gmail.com</span>
-  </div>
-</footer>
+    <div class="footer-socials" aria-label="Social links">
+      <a href="https://www.linkedin.com/in/p2the28" target="_blank" aria-label="LinkedIn">
+        <img src="assets/linklogo.png" alt="LinkedIn">
+      </a>
+      <a href="https://github.com/P2THE28" target="_blank" aria-label="GitHub">
+        <img src="assets/gitlogo.png" alt="GitHub">
+      </a>
+      <a href="https://www.instagram.com/p2the28" target="_blank" aria-label="Instagram">
+        <img src="assets/insatlogo.png" alt="Instagram">
+      </a>
+      <a href="https://x.com/P2THE28" target="_blank" aria-label="X">
+        <img src="assets/xlogo.png" alt="X">
+      </a>
+    </div>
 
+    <div class="footer-email" style="width:100%;text-align:center;margin-top:8px;">
+      <span>📧 priyanshuask23@gmail.com</span>
+    </div>
+  </div>
+  
+
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
