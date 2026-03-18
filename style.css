@@ -130,12 +130,14 @@ body{
 
 h2{color:#064ef7;margin:20px 0 10px;font-size:18px}
 h3{color:#0f172a;margin:0 0 10px}
-/* Projects */
+
+
+/*==========================================Projects=================================================*/
 .project-card{background:#ffffff;border-radius:12px;padding:16px;margin-top:12px;border:1px solid rgba(15,23,42,0.04);box-shadow:0 6px 18px rgba(2,6,23,0.03);transition:transform .18s ease,box-shadow .18s ease}
 .project-card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(2,6,23,0.09)}
 .project-card a{color:#ea0d39;font-weight:700;text-decoration:none}
 
-/* Skills */
+/*==========================================Skills=============================================================*/
 .skills-grid{          /*for size of the card*/
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
@@ -199,7 +201,7 @@ h3{color:#0f172a;margin:0 0 10px}
   .header-inner{padding:0 14px}
 }
 
-/* Projects grid styles */
+/*=================================================Projects grid styles================================================*/
 .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:12px}
 .project-card{display:flex;flex-direction:column;overflow:hidden;border-radius:12px;border:1px solid rgba(15,23,42,0.04);background:linear-gradient(180deg,var(--card),#fff);box-shadow:0 8px 30px rgba(2,6,23,0.04);transition:transform .22s cubic-bezier(.2,.9,.2,1),box-shadow .22s}
 .project-card:focus{outline:2px solid rgba(37,99,235,0.18);outline-offset:4px}
@@ -212,6 +214,9 @@ h3{color:#0f172a;margin:0 0 10px}
 .tag{background:linear-gradient(90deg,#eef6ff,#f8fafc);padding:6px 8px;border-radius:999px;font-weight:700;font-size:12px;color:var(--accent);border:1px solid rgba(37,99,235,0.06)}
 .view-project{background:transparent;border:none;color:var(--accent);font-weight:800;cursor:pointer;padding:6px 10px;border-radius:8px}
 .view-project:hover{background:rgba(37,99,235,0.06)}
+.participation-certificate{background:transparent;border:rgb(0, 0, 0);color:var(--accent);font-weight:800;cursor:pointer;padding:6px 10px;border-radius:8px}
+.participation-certificate:hover{background:rgba(37,99,235,0.06)}
+
 
 /* Modal */
 .modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;z-index:1200}
@@ -219,13 +224,72 @@ h3{color:#0f172a;margin:0 0 10px}
 .modal-backdrop{position:absolute;inset:0;background:rgba(2,6,23,0.5);backdrop-filter: blur(3px)}
 .modal-content{position:relative;z-index:2;max-width:780px;width:calc(100% - 40px);background:#fbfeff;border-radius:12px;padding:18px;box-shadow:0 30px 80px rgba(2,6,23,0.2);transform:translateY(12px);opacity:0;transition:opacity .26s ease,transform .26s ease}
 .modal[aria-hidden="false"] .modal-content{transform:none;opacity:1}
-.modal-close{position:absolute;right:12px;top:12px;border:none;background:transparent;font-size:18px;cursor:pointer;color:#6b7280}
+.modal-close{
+  position:absolute;
+  right:1px;
+  top:0px;
+  border:black;
+  border-radius:12px;
+  background:transparent;
+  font-size:18px;
+  cursor:pointer;
+  color:#000000
+}
+.modal-close:hover {
+  background-color: red;
+}
 .modal-media img{width:100%;height:260px;object-fit:cover;border-radius:8px;margin-bottom:12px}
 .modal-actions{margin-top:12px;display:flex;gap:10px}
 
 @media (max-width:560px){
   .modal-content{padding:14px}
   .modal-media img{height:160px}
+}
+
+
+/*===============PROJECT CERTIFICATE===================*/
+
+/* Modal background */
+.modal-certificate {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(3, 1, 1, 0.6);
+}
+
+/* Modal content1 */
+.modal-content1 {
+  position: relative;
+  width: 90%;
+  height: 90%;
+  margin: 1% auto;
+  background: rgb(255, 255, 255);
+  padding: 5px;
+}
+
+/* PDF frame */
+iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/* Close button */
+.close-certificate {
+  position: absolute;
+  top: 20px;
+  right: 23px;
+  font-size: 20px;
+  border-radius:100px;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  background: rgb(60, 59, 59);
+}
+.close-certificate:hover {
+   background-color: red;
 }
 
 
@@ -236,7 +300,7 @@ h3{color:#0f172a;margin:0 0 10px}
   gap: 18px;
   overflow-x: auto;
   padding-bottom: 8px;
-  scroll-snap-type: x mandatory;
+  scroll-snap-type: X mandatory;
 }
 
 .certificate-card{
@@ -314,15 +378,3 @@ h3{color:#0f172a;margin:0 0 10px}
   color:#0f172a;
   font-weight:600
 }
-
-
-
-
-
-
-
-
-
-
-
-
