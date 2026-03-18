@@ -9,21 +9,7 @@ window.addEventListener("load", () => {
 // Respect reduced motion preferences
 const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-// Theme handling (persisted)
-const root = document.documentElement;
-const savedTheme = localStorage.getItem('theme');
-if(savedTheme === 'dark') root.classList.add('theme-dark');
-
-const themeToggle = document.getElementById('themeToggle');
-if(themeToggle){
-  themeToggle.addEventListener('click', () => {
-    const isDark = root.classList.toggle('theme-dark');
-    themeToggle.setAttribute('aria-pressed', String(isDark));
-    localStorage.setItem('theme', isDark ? 'dark' : 'light');
-  });
-}
-
-// Entrance animations (skip if reduced motion)
+// Entrance animations
 window.addEventListener('load', () => {
   if(!prefersReduced){
     document.querySelectorAll('.container, .header-inner, .project-card, .skill-card, .card').forEach((el, i) => {
@@ -38,78 +24,62 @@ window.addEventListener('load', () => {
   }
 });
 
-// Audio is optional; don't auto-play — only on explicit interactions
-let audioEnabled = !prefersReduced;
-try{
-  const scrollSound = new Audio('assets/scroll.mp3');
-  const clickSound = new Audio('assets/click.mp3');
-  scrollSound.volume = 0.35; clickSound.volume = 0.45;
-
-  document.addEventListener('click', e => {
-    const card = e.target.closest('.project-card');
-    if(card && audioEnabled) clickSound.play().catch(()=>{});
-  });
-
-  let scrollTimeout=false;
-  window.addEventListener('scroll',()=>{
-    if(!audioEnabled) return;
-    if(!scrollTimeout){
-      scrollSound.play().catch(()=>{});
-      scrollTimeout=true;
-      setTimeout(()=>scrollTimeout=false,400);
-    }
-  });
-}catch(err){
-  // audio files missing or blocked — silently ignore
-}
 
 // Project modal interactions
-const modal = document.getElementById('projectModal');
-const modalTitle = document.getElementById('modalTitle');
+const projectModal = document.getElementById('projectModal');
+const modalTitle =document.getElementById('modalTitle');
 const modalDesc = document.getElementById('modalDesc');
 const modalLink = document.getElementById('modalLink');
 const modalMediaImg = document.querySelector('.modal-media img');
 
 function openModal(card){
-  if(!modal) return;
-  const title = card.dataset.title || '';
-  const desc = card.dataset.desc || '';
-  const link = card.dataset.link || '';
-  const img = card.querySelector('.project-media img')?.src || '';
-  modalTitle.textContent = title;
-  modalDesc.textContent = desc;
-  modalLink.href = link || '#';
-  if(modalMediaImg) modalMediaImg.src = img;
-  modal.setAttribute('aria-hidden','false');
+  if(!projectModal) return;
+  modalTitle.textContent = card.dataset.title || '';
+  modalDesc.textContent = card.dataset.desc || '';
+  modalLink.href = card.dataset.link || '#';
+  modalMediaImg && (modalMediaImg.src = card.querySelector('.project-media img')?.src || '');
+  projectModal.setAttribute('aria-hidden','false');
   document.body.style.overflow = 'hidden';
-  // move focus into modal
-  const closeBtn = modal.querySelector('.modal-close');
-  closeBtn?.focus();
+  projectModal.querySelector('.modal-close')?.focus();
 }
 
 function closeModal(){
-  if(!modal) return;
-  modal.setAttribute('aria-hidden','true');
+  if(!projectModal) return;
+  projectModal.setAttribute('aria-hidden','true');
   document.body.style.overflow = '';
 }
 
 document.addEventListener('click', e => {
   const view = e.target.closest('.view-project');
-  if(view){
-    const card = view.closest('.project-card');
-    openModal(card);
-  }
-  if(e.target.closest && e.target.closest('.modal-close')) closeModal();
-  if(e.target.classList && e.target.classList.contains('modal-backdrop')) closeModal();
+  if(view) openModal(view.closest('.project-card'));
+  if(e.target.closest?.('.modal-close') || e.target.classList?.contains('modal-backdrop')) closeModal();
 });
 
 document.addEventListener('keydown', e => {
   if(e.key === 'Escape') closeModal();
 });
 
-// Allow Enter key to open focused project card
-document.addEventListener('keydown', e => {
-  if(e.key === 'Enter' && document.activeElement?.classList?.contains('project-card')){
-    openModal(document.activeElement);
-  }
+
+//===========project certificate=======//
+
+const certBtns = document.querySelectorAll(".participation-certificate");
+const certModal = document.getElementById("pdfModal");
+const frame = document.getElementById("pdfFrame");
+const certclose = document.querySelector(".close-certificate");
+
+// sab buttons pe loop
+certBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const pdfPath = btn.getAttribute("data-pdf"); // yaha se PDF aayega
+    frame.src = pdfPath;
+    certModal.style.display = "block";
+    document.body.classList.add("blur");
+  });
+});
+
+// close
+certclose.addEventListener("click", () => {
+  certModal.style.display = "none";
+  frame.src = "";
+  document.body.classList.remove("blur");
 });
